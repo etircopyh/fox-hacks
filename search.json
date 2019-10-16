@@ -1,0 +1,617 @@
+{
+  "version": 1,
+  "buildID": "20191010185218",
+  "appVersion": "69.0.3",
+  "locale": "en-US",
+  "visibleDefaultEngines": [
+    "amazondotcom",
+    "bing",
+    "google-b-1-d",
+    "twitter",
+    "wikipedia",
+    "ddg"
+  ],
+  "metaData": {
+    "searchDefault": "Google",
+    "searchDefaultHash": "vpZn1THcd+HWRDCOFKdaqghMX5yhdn4tpI+96uTLVVQ=",
+    "visibleDefaultEngines": "amazondotcom,bing,google,twitter,wikipedia,ddg",
+    "visibleDefaultEnginesHash": "xvjA6nM9MAg4X1KFnDjqfmuR1hu2Dqfy8lntXBcN084=",
+    "searchDefaultExpir": 1570323360182,
+    "current": "[s] Google",
+    "hash": "zvSuoRVdpW4Y6uRXiHI1P2R9cGYPIq2QSM0zw27YJb4="
+  },
+  "engines": [
+    {
+      "_name": "Amazon.com",
+      "_shortName": "amazondotcom",
+      "_loadPath": "[other]addEngineWithDetails:amazondotcom@search.mozilla.org",
+      "description": "Amazon.com Search",
+      "__searchForm": "https://www.amazon.com/exec/obidos/external-search/?field-keywords={searchTerms}&ie={inputEncoding}&mode=blended&tag=mozilla-20&sourceid=Mozilla-search",
+      "_iconURL": "moz-extension://fd12b140-6373-4ad7-9140-c5a8a3a1c31c/favicon.ico",
+      "_iconMapObj": {
+        "{}": "moz-extension://fd12b140-6373-4ad7-9140-c5a8a3a1c31c/favicon.ico"
+      },
+      "_metaData": {
+        "alias": null,
+        "hidden": true,
+        "order": 5
+      },
+      "_urls": [
+        {
+          "template": "https://www.amazon.com/exec/obidos/external-search/",
+          "rels": [],
+          "resultDomain": "www.amazon.com",
+          "params": [
+            {
+              "name": "field-keywords",
+              "value": "{searchTerms}"
+            },
+            {
+              "name": "ie",
+              "value": "{inputEncoding}"
+            },
+            {
+              "name": "mode",
+              "value": "blended"
+            },
+            {
+              "name": "tag",
+              "value": "mozilla-20"
+            },
+            {
+              "name": "sourceid",
+              "value": "Mozilla-search"
+            }
+          ]
+        },
+        {
+          "template": "https://completion.amazon.com/search/complete?q={searchTerms}&search-alias=aps&mkt=1",
+          "rels": [],
+          "resultDomain": "completion.amazon.com",
+          "type": "application/x-suggestions+json",
+          "params": []
+        }
+      ],
+      "_isBuiltin": true,
+      "queryCharset": "UTF-8",
+      "extensionID": "amazondotcom@search.mozilla.org"
+    },
+    {
+      "_name": "Bing",
+      "_shortName": "bing",
+      "_loadPath": "[other]addEngineWithDetails:bing@search.mozilla.org",
+      "description": "Bing. Search by Microsoft.",
+      "__searchForm": "https://www.bing.com/search?q={searchTerms}&pc=MOZI",
+      "_iconURL": "moz-extension://60558e91-aaad-4bbf-ade9-865de5275616/favicon.ico",
+      "_iconMapObj": {
+        "{}": "moz-extension://60558e91-aaad-4bbf-ade9-865de5275616/favicon.ico"
+      },
+      "_metaData": {
+        "alias": null,
+        "hidden": true,
+        "order": 4
+      },
+      "_urls": [
+        {
+          "template": "https://www.bing.com/search",
+          "rels": [],
+          "resultDomain": "www.bing.com",
+          "params": [
+            {
+              "name": "q",
+              "value": "{searchTerms}"
+            },
+            {
+              "name": "pc",
+              "value": "MOZI"
+            },
+            {
+              "name": "form",
+              "value": "MOZCON",
+              "purpose": "contextmenu"
+            },
+            {
+              "name": "form",
+              "value": "MOZSBR",
+              "purpose": "searchbar"
+            },
+            {
+              "name": "form",
+              "value": "MOZSPG",
+              "purpose": "homepage"
+            },
+            {
+              "name": "form",
+              "value": "MOZLBR",
+              "purpose": "keyword"
+            },
+            {
+              "name": "form",
+              "value": "MOZTSB",
+              "purpose": "newtab"
+            }
+          ]
+        },
+        {
+          "template": "https://www.bing.com/osjson.aspx",
+          "rels": [],
+          "resultDomain": "www.bing.com",
+          "type": "application/x-suggestions+json",
+          "params": [
+            {
+              "name": "query",
+              "value": "{searchTerms}"
+            },
+            {
+              "name": "form",
+              "value": "OSDJAS"
+            },
+            {
+              "name": "language",
+              "value": "{moz:locale}"
+            }
+          ]
+        }
+      ],
+      "_isBuiltin": true,
+      "queryCharset": "UTF-8",
+      "extensionID": "bing@search.mozilla.org"
+    },
+    {
+      "_name": "Google",
+      "_shortName": "google-b-1-d",
+      "_loadPath": "[other]addEngineWithDetails:google@search.mozilla.org",
+      "description": "Google Search",
+      "__searchForm": "https://www.google.com/search?client=firefox-b-1-d&q={searchTerms}",
+      "_iconURL": "moz-extension://3789ab44-aa93-43f1-898a-d80541db6ee7/favicon.ico",
+      "_iconMapObj": {
+        "{}": "moz-extension://3789ab44-aa93-43f1-898a-d80541db6ee7/favicon.ico"
+      },
+      "_metaData": {
+        "alias": null,
+        "order": 3,
+        "hidden": true
+      },
+      "_urls": [
+        {
+          "template": "https://www.google.com/search",
+          "rels": [],
+          "resultDomain": "www.google.com",
+          "params": [
+            {
+              "name": "client",
+              "value": "firefox-b-1-d"
+            },
+            {
+              "name": "q",
+              "value": "{searchTerms}"
+            }
+          ]
+        },
+        {
+          "template": "https://www.google.com/complete/search?client=firefox&q={searchTerms}",
+          "rels": [],
+          "resultDomain": "www.google.com",
+          "type": "application/x-suggestions+json",
+          "params": []
+        }
+      ],
+      "_isBuiltin": true,
+      "queryCharset": "UTF-8",
+      "extensionID": "google@search.mozilla.org"
+    },
+    {
+      "_name": "Twitter",
+      "_shortName": "twitter",
+      "_loadPath": "[other]addEngineWithDetails:twitter@search.mozilla.org",
+      "description": "Realtime Twitter Search",
+      "__searchForm": "https://twitter.com/search?q={searchTerms}&partner=Firefox&source=desktop-search",
+      "_iconURL": "moz-extension://8d20c11d-5ff6-419f-8f0e-65aa18cf65e0/favicon.ico",
+      "_iconMapObj": {
+        "{}": "moz-extension://8d20c11d-5ff6-419f-8f0e-65aa18cf65e0/favicon.ico"
+      },
+      "_metaData": {
+        "alias": null,
+        "hidden": true,
+        "order": 7
+      },
+      "_urls": [
+        {
+          "template": "https://twitter.com/search",
+          "rels": [],
+          "resultDomain": "twitter.com",
+          "params": [
+            {
+              "name": "q",
+              "value": "{searchTerms}"
+            },
+            {
+              "name": "partner",
+              "value": "Firefox"
+            },
+            {
+              "name": "source",
+              "value": "desktop-search"
+            }
+          ]
+        }
+      ],
+      "_isBuiltin": true,
+      "queryCharset": "UTF-8",
+      "extensionID": "twitter@search.mozilla.org"
+    },
+    {
+      "_name": "Wikipedia (en)",
+      "_shortName": "wikipedia",
+      "_loadPath": "[other]addEngineWithDetails:wikipedia@search.mozilla.org",
+      "description": "Wikipedia, the Free Encyclopedia",
+      "__searchForm": "https://en.wikipedia.org/wiki/Special:Search?search={searchTerms}&sourceid=Mozilla-search",
+      "_iconURL": "moz-extension://5829a2f5-7880-40dd-a1cc-cd7a98452181/favicon.ico",
+      "_iconMapObj": {
+        "{}": "moz-extension://5829a2f5-7880-40dd-a1cc-cd7a98452181/favicon.ico"
+      },
+      "_metaData": {
+        "alias": null,
+        "order": 8
+      },
+      "_urls": [
+        {
+          "template": "https://en.wikipedia.org/wiki/Special:Search",
+          "rels": [],
+          "resultDomain": "en.wikipedia.org",
+          "params": [
+            {
+              "name": "search",
+              "value": "{searchTerms}"
+            },
+            {
+              "name": "sourceid",
+              "value": "Mozilla-search"
+            }
+          ]
+        },
+        {
+          "template": "https://en.wikipedia.org/w/api.php?action=opensearch&search={searchTerms}",
+          "rels": [],
+          "resultDomain": "en.wikipedia.org",
+          "type": "application/x-suggestions+json",
+          "params": []
+        }
+      ],
+      "_isBuiltin": true,
+      "queryCharset": "UTF-8",
+      "extensionID": "wikipedia@search.mozilla.org"
+    },
+    {
+      "_name": "DuckDuckGo",
+      "_shortName": "ddg",
+      "_loadPath": "[other]addEngineWithDetails:ddg@search.mozilla.org",
+      "description": "Search DuckDuckGo",
+      "__searchForm": "https://duckduckgo.com/?q={searchTerms}",
+      "_iconURL": "moz-extension://382eb524-5df3-4fd4-97f4-fab8f522266b/favicon.ico",
+      "_iconMapObj": {
+        "{}": "moz-extension://382eb524-5df3-4fd4-97f4-fab8f522266b/favicon.ico"
+      },
+      "_metaData": {
+        "alias": null,
+        "order": 6,
+        "hidden": true
+      },
+      "_urls": [
+        {
+          "template": "https://duckduckgo.com/",
+          "rels": [],
+          "resultDomain": "duckduckgo.com",
+          "params": [
+            {
+              "name": "q",
+              "value": "{searchTerms}"
+            },
+            {
+              "name": "t",
+              "value": "ffcm",
+              "purpose": "contextmenu"
+            },
+            {
+              "name": "t",
+              "value": "ffab",
+              "purpose": "keyword"
+            },
+            {
+              "name": "t",
+              "value": "ffsb",
+              "purpose": "searchbar"
+            },
+            {
+              "name": "t",
+              "value": "ffhp",
+              "purpose": "homepage"
+            },
+            {
+              "name": "t",
+              "value": "ffnt",
+              "purpose": "newtab"
+            }
+          ]
+        },
+        {
+          "template": "https://ac.duckduckgo.com/ac/",
+          "rels": [],
+          "resultDomain": "ac.duckduckgo.com",
+          "type": "application/x-suggestions+json",
+          "params": [
+            {
+              "name": "q",
+              "value": "{searchTerms}"
+            },
+            {
+              "name": "type",
+              "value": "list"
+            }
+          ]
+        }
+      ],
+      "_isBuiltin": true,
+      "queryCharset": "UTF-8",
+      "extensionID": "ddg@search.mozilla.org"
+    },
+    {
+      "_name": "[s] Google",
+      "_shortName": "google-b-1-d",
+      "_loadPath": "[other]addEngineWithDetails:google@search.mozilla.org",
+      "description": "Sanitized Google",
+      "__searchForm": "https://www.google.com/search?q={searchTerms}",
+      "_iconURL": "moz-extension://3789ab44-aa93-43f1-898a-d80541db6ee7/favicon.ico",
+      "_iconMapObj": {
+        "{}": "moz-extension://3789ab44-aa93-43f1-898a-d80541db6ee7/favicon.ico"
+      },
+      "_metaData": {
+        "alias": null,
+        "order": 1
+      },
+      "_urls": [
+        {
+          "template": "https://www.google.com/search",
+          "rels": [],
+          "resultDomain": "www.google.com",
+          "params": [
+            {
+              "name": "q",
+              "value": "{searchTerms}"
+            }
+          ]
+        },
+        {
+          "template": "https://www.google.com/complete/search?q={searchTerms}",
+          "rels": [],
+          "resultDomain": "www.google.com",
+          "type": "application/x-suggestions+json",
+          "params": []
+        }
+      ],
+      "_isBuiltin": true,
+      "queryCharset": "UTF-8",
+      "extensionID": "google@search.mozilla.org"
+    },
+    {
+      "_name": "[s] DuckDuckGo",
+      "_shortName": "ddg",
+      "_loadPath": "[other]addEngineWithDetails:ddg@search.mozilla.org",
+      "description": "Sanitized DuckDuckGo",
+      "__searchForm": "https://duckduckgo.com/?q={searchTerms}",
+      "_iconURL": "moz-extension://382eb524-5df3-4fd4-97f4-fab8f522266b/favicon.ico",
+      "_iconMapObj": {
+        "{}": "moz-extension://382eb524-5df3-4fd4-97f4-fab8f522266b/favicon.ico"
+      },
+      "_metaData": {
+        "alias": null,
+        "order": 2
+      },
+      "_urls": [
+        {
+          "template": "https://duckduckgo.com/",
+          "rels": [],
+          "resultDomain": "duckduckgo.com",
+          "params": [
+            {
+              "name": "q",
+              "value": "{searchTerms}"
+            }
+          ]
+        },
+        {
+          "template": "https://ac.duckduckgo.com/ac/",
+          "rels": [],
+          "resultDomain": "ac.duckduckgo.com",
+          "type": "application/x-suggestions+json",
+          "params": [
+            {
+              "name": "q",
+              "value": "{searchTerms}"
+            },
+            {
+              "name": "type",
+              "value": "list"
+            }
+          ]
+        }
+      ],
+      "_isBuiltin": true,
+      "queryCharset": "UTF-8",
+      "extensionID": "ddg@search.mozilla.org"
+    },
+    {
+      "_name": "[s] Amazon",
+      "_shortName": "amazondotcom",
+      "_loadPath": "[other]addEngineWithDetails:amazondotcom@search.mozilla.org",
+      "description": "Sanitized Amazon",
+      "__searchForm": "https://www.amazon.com/exec/obidos/external-search/?field-keywords={searchTerms}&ie={inputEncoding}&mode=blended",
+      "_iconURL": "moz-extension://fd12b140-6373-4ad7-9140-c5a8a3a1c31c/favicon.ico",
+      "_iconMapObj": {
+        "{}": "moz-extension://fd12b140-6373-4ad7-9140-c5a8a3a1c31c/favicon.ico"
+      },
+      "_metaData": {
+        "alias": null,
+        "hidden": true,
+        "order": 5
+      },
+      "_urls": [
+        {
+          "template": "https://www.amazon.com/exec/obidos/external-search/",
+          "rels": [],
+          "resultDomain": "www.amazon.com",
+          "params": [
+            {
+              "name": "field-keywords",
+              "value": "{searchTerms}"
+            },
+            {
+              "name": "ie",
+              "value": "{inputEncoding}"
+            },
+            {
+              "name": "mode",
+              "value": "blended"
+            }
+          ]
+        },
+        {
+          "template": "https://completion.amazon.com/search/complete?q={searchTerms}&search-alias=aps&mkt=1",
+          "rels": [],
+          "resultDomain": "completion.amazon.com",
+          "type": "application/x-suggestions+json",
+          "params": []
+        }
+      ],
+      "_isBuiltin": true,
+      "queryCharset": "UTF-8",
+      "extensionID": "amazondotcom@search.mozilla.org"
+    },
+    {
+      "_name": "[s] Bing",
+      "_shortName": "bing",
+      "_loadPath": "[other]addEngineWithDetails:bing@search.mozilla.org",
+      "description": "Sanitized Bing",
+      "__searchForm": "https://www.bing.com/search?q={searchTerms}",
+      "_iconURL": "moz-extension://60558e91-aaad-4bbf-ade9-865de5275616/favicon.ico",
+      "_iconMapObj": {
+        "{}": "moz-extension://60558e91-aaad-4bbf-ade9-865de5275616/favicon.ico"
+      },
+      "_metaData": {
+        "alias": null,
+        "hidden": true,
+        "order": 4
+      },
+      "_urls": [
+        {
+          "template": "https://www.bing.com/search",
+          "rels": [],
+          "resultDomain": "www.bing.com",
+          "params": [
+            {
+              "name": "q",
+              "value": "{searchTerms}"
+            }
+          ]
+        },
+        {
+          "template": "https://www.bing.com/osjson.aspx",
+          "rels": [],
+          "resultDomain": "www.bing.com",
+          "type": "application/x-suggestions+json",
+          "params": [
+            {
+              "name": "query",
+              "value": "{searchTerms}"
+            },
+            {
+              "name": "form",
+              "value": "OSDJAS"
+            },
+            {
+              "name": "language",
+              "value": "{moz:locale}"
+            }
+          ]
+        }
+      ],
+      "_isBuiltin": true,
+      "queryCharset": "UTF-8",
+      "extensionID": "bing@search.mozilla.org"
+    },
+    {
+      "_name": "[s] Twitter",
+      "_shortName": "twitter",
+      "_loadPath": "[other]addEngineWithDetails:twitter@search.mozilla.org",
+      "description": "Sanitized Twitter Search",
+      "__searchForm": "https://twitter.com/search?q={searchTerms}&source=desktop-search",
+      "_iconURL": "moz-extension://8d20c11d-5ff6-419f-8f0e-65aa18cf65e0/favicon.ico",
+      "_iconMapObj": {
+        "{}": "moz-extension://8d20c11d-5ff6-419f-8f0e-65aa18cf65e0/favicon.ico"
+      },
+      "_metaData": {
+        "alias": null,
+        "hidden": true,
+        "order": 7
+      },
+      "_urls": [
+        {
+          "template": "https://twitter.com/search",
+          "rels": [],
+          "resultDomain": "twitter.com",
+          "params": [
+            {
+              "name": "q",
+              "value": "{searchTerms}"
+            },
+            {
+              "name": "source",
+              "value": "desktop-search"
+            }
+          ]
+        }
+      ],
+      "_isBuiltin": true,
+      "queryCharset": "UTF-8",
+      "extensionID": "twitter@search.mozilla.org"
+    },
+    {
+      "_name": "[s] Wikipedia",
+      "_shortName": "wikipedia",
+      "_loadPath": "[other]addEngineWithDetails:wikipedia@search.mozilla.org",
+      "description": "Sanitized Wikipedia",
+      "__searchForm": "https://en.wikipedia.org/wiki/Special:Search?search={searchTerms}",
+      "_iconURL": "moz-extension://5829a2f5-7880-40dd-a1cc-cd7a98452181/favicon.ico",
+      "_iconMapObj": {
+        "{}": "moz-extension://5829a2f5-7880-40dd-a1cc-cd7a98452181/favicon.ico"
+      },
+      "_metaData": {
+        "alias": null,
+        "order": 8
+      },
+      "_urls": [
+        {
+          "template": "https://en.wikipedia.org/wiki/Special:Search",
+          "rels": [],
+          "resultDomain": "en.wikipedia.org",
+          "params": [
+            {
+              "name": "search",
+              "value": "{searchTerms}"
+            }
+          ]
+        },
+        {
+          "template": "https://en.wikipedia.org/w/api.php?action=opensearch&search={searchTerms}",
+          "rels": [],
+          "resultDomain": "en.wikipedia.org",
+          "type": "application/x-suggestions+json",
+          "params": []
+        }
+      ],
+      "_isBuiltin": true,
+      "queryCharset": "UTF-8",
+      "extensionID": "wikipedia@search.mozilla.org"
+    }
+  ]
+}
