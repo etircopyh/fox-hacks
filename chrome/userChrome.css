@@ -60,15 +60,15 @@ tab:not([selected='true']) {
 /* Tab: selected colors */
 
 #tabbrowser-tabs .tabbrowser-tab[selected] .tab-content {
-background: #282A36 !important;
-color: #70aaec !important;
+    background: #282A36 !important;
+    color: #70aaec !important;
 }
 
 /* Tab: hovered colors */
 
 #tabbrowser-tabs .tabbrowser-tab:hover:not([selected]) .tab-content {
-background: #242424 !important;
-color: #70aaec !important;
+    background: #242424 !important;
+    color: #70aaec !important;
 }
 
 
