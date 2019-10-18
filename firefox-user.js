@@ -217,7 +217,7 @@ user_pref("webgl.disable-fail-if-major-performance-caveat", true);
 user_pref("webgl.msaa-samples", 0);
 user_pref("layers.geometry.d3d11.enabled", false); // Disable usage of D3D11
 user_pref("browser.preferences.defaultPerformanceSettings.enabled", false); // Disable Firefox "recommended" performance settings
-user_pref("dom.ipc.processCount", 10); // Adjust Web Content process limit
+user_pref("dom.ipc.processCount", 1); // Adjust Web Content process limit
     /*      == Cache ==        */
 user_pref("browser.cache.disk.enable", true); // Enable disk cache
 user_pref("browser.cache.disk.capacity", 524288); // Disk cache capacity: -1 = determine dynamically (default), 0 = none, n = memory capacity in kilobytes
