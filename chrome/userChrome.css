@@ -8,13 +8,13 @@ a[href$='.pdf']:after {
 /* Hide tabs entirely if there's only one */
 #tabbrowser-tabs,
 #tabbrowser-tabs arrowscrollbox {
-min-height: 0 !important;
+    min-height: 0 !important;
 }
 #tabbrowser-tabs tab {
-height: var(--tab-min-height);
+    height: var(--tab-min-height);
 }
 #tabbrowser-tabs tab:first-child:last-child {
-display: none !important;
+    display: none !important;
 }
 
 /* Hide tab bar if only one tab */
@@ -29,12 +29,10 @@ tab:only-of-type {
 
 /* No blue line on top of the focused tab */
 #tabbrowser-tabs {
---tab-line-color: -moz-win-accentcolor !important;
---tab-loading-fill: -moz-win-accentcolor !important;
-box-shadow: none !important;
+    --tab-line-color: -moz-win-accentcolor !important;
+    --tab-loading-fill: -moz-win-accentcolor !important;
+    box-shadow: none !important;
 }
-
-
 
 /* Don't show the blue border around the url bar when focused */
 #urlbar,
@@ -46,37 +44,30 @@ box-shadow: none !important;
 
 /*  Dark status tooltip */
 #statuspanel-label {
-background-color: black !important;
-color: white !important;
+    background-color: black !important;
+    color: white !important;
 }
 
 /* Change color of normal tabs */
-
 tab:not([selected='true']) {
-    background-color: #191A21 !important;
+    background-color: #191a21 !important;
     color: #70aaec !important;
 }
 
 /* Tab: selected colors */
-
 #tabbrowser-tabs .tabbrowser-tab[selected] .tab-content {
-    background: #282A36 !important;
+    background: #282a36 !important;
     color: #70aaec !important;
 }
 
 /* Tab: hovered colors */
-
 #tabbrowser-tabs .tabbrowser-tab:hover:not([selected]) .tab-content {
     background: #242424 !important;
     color: #70aaec !important;
 }
 
-
-
-
 /* Show tab close button when cursor is over the tab icon */
-
-.tab-close-button{
+.tab-close-button {
     -moz-box-ordinal-group: 0;
     display: -moz-box !important;
     position: relative;
@@ -85,10 +76,19 @@ tab:not([selected='true']) {
     visibility: hidden;
 }
 
-.tabbrowser-tab[pinned] .tab-close-button{ display: none !important; }
-.tab-close-button:hover{ background-color: var(--lwt-accent-color); }
+.tabbrowser-tab[pinned] .tab-close-button {
+    display: none !important;
+}
+.tab-close-button:hover {
+    background-color: var (--lwt-accent-color);
+}
 
-.tabbrowser-tab[selected] .tab-close-button:hover{ background-color: var(--lwt-selected-tab-background-color, var(--toolbar-bgcolor)); }
+.tabbrowser-tab[selected] .tab-close-button:hover {
+    background-color: var(
+        --lwt-selected-tab-background-color,
+        var(--toolbar-bgcolor)
+    );
+}
 
 /**** ONLY USE ONE OF THE FOLLOWING ****/
 /**** These select the behavior of a scenario where the page has no favicon ****/
@@ -96,26 +96,31 @@ tab:not([selected='true']) {
 /*** Option 1 - no favicon - no close-button ***/
 
 /*
- * .tab-icon-image:hover ~ .tab-close-button, .tab-close-button:hover{ visibility: visible; z-index: 1 }
- */
+.tab-icon-image:hover ~ .tab-close-button, .tab-close-button:hover { visibility: visible; z-index: 1 }
+*/
 
 /*** Option 2 - No icon - always show close-button ***/
 
 /*
- * .tab-icon-image:hover ~ .tab-close-button,
- * .tab-close-button:hover,
- * .tab-icon-image:not([src]) ~ .tab-close-button{ visibility: visible; z-index: 1 }
- * .tab-icon-image:not([src]) ~  .tab-close-button{ margin-right:0px !important; }
- */
+.tab-icon-image:hover ~ .tab-close-button,
+.tab-close-button:hover,
+.tab-icon-image:not([src]) ~ .tab-close-button { visibility: visible; z-index: 1 }
+.tab-icon-image:not([src]) ~  .tab-close-button { margin-right:0px !important; }
+*/
 
 /*** Option 3 - No icon - show close-button when cursor is over the tab text ***/
 
 .tab-icon-image:hover ~ .tab-close-button,
+.tab-throbber:hover ~ .tab-close-button,
 .tab-close-button:hover,
-.tab-icon-image:not([src]) ~ .tab-label-container:hover ~ .tab-close-button{ visibility: visible; z-index: 1 }
+.tab-icon-image:not([src]) ~ .tab-label-container:hover ~ .tab-close-button {
+    visibility: visible;
+    z-index: 1;
+}
 .tab-icon-image:not([src]) ~ .tab-label-container:hover ~ .tab-close-button,
-.tab-icon-image:not([src]) ~ .tab-close-button:hover {margin-right: 0px !important; }
-
+.tab-icon-image:not([src]) ~ .tab-close-button:hover {
+    margin-right: 0px !important;
+}
 
 /* Remove window control buttons */
 .titlebar-buttonbox-container {
@@ -123,18 +128,35 @@ tab:not([selected='true']) {
 }
 
 /* Why 100vw? Tab closing requires width animation to end and "none" can't be animated */
-.tabbrowser-tab[fadein]{ max-width: 100vw !important }
+.tabbrowser-tab[fadein] {
+    max-width: 100vw !important;
+}
 
+/* Remove spacer at the end of tabs bar */
+.titlebar-spacer {
+    display: none;
+}
 
+#back-button[disabled='true'] {
+    opacity: 0.35;
+}
 
-#back-button[disabled="true"] { opacity: 0.35; }
+#forward-button[disabled='true'] {
+    opacity: 0.35;
+}
 
-#forward-button[disabled="true"] { opacity: 0.35; }
+#stop-button[disabled='true'] {
+    opacity: 0.35;
+}
 
-#stop-button[disabled="true"] { opacity: 0.35; }
+#home-button {
+    display: none;
+}
 
-#home-button { display: none; }
+#throbber-box {
+    display: none !important;
+}
 
-#throbber-box { display: none !important; }
-
-#pageActionButton { display: none !important; }
+#pageActionButton {
+    display: none !important;
+}
