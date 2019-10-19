@@ -17,8 +17,31 @@ a[href$='.pdf']:after {
 }
 
 /* Hide tab bar if only one tab */
-tab:only-of-type {
+tab:only-of-type + .toolbarbutton-1 {
     display: none;
+    margin-bottom: 0 !important;
+}
+
+/* Hide tabs space if there only one tab */
+tab[first-visible-tab='true'][last-visible-tab='true'] {
+    display: none !important;
+    height: 0 !important;
+}
+
+#window-controls {
+    display: none;
+}
+
+/* VARIOUS FIXES */
+
+/* Dim unloaded tabs */
+.tabbrowser-tab[pending] {
+    opacity: .8;
+}
+
+/* Fixes a 1px bug after using the global menu */
+#toolbar-menubar {
+    padding: 0 !important;
 }
 
 /* Hide the one pixel top border for tabs */
