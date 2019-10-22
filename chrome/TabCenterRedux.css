@@ -1,6 +1,6 @@
 /* TabCenter Redux */
 /* Change styling of unread tabs */
-.tab[notselectedsinceload="true"] {
+.tab[notselectedsinceload='true'] {
     font-style: italic;
 }
 
@@ -26,7 +26,7 @@
 
 /* Reduce height of tabs in compact mode */
 #tablist-wrapper.shrinked .tab:not(.pinned) {
-height: 29px !important;
+    height: 29px !important;
 }
 
 /* Add white outline around favicons (dark theme) */
@@ -37,25 +37,27 @@ body.dark-theme .tab .tab-icon {
 /* Change colors of icon border + bg, thumbnail border + bg */
 /* color for icon border + transparent icon bg */
 #tablist-wrapper:not(.shrinked) #tablist .tab-icon-wrapper,
-#tablist-wrapper:not(.shrinked) #pinnedtablist:not(.compact){
-background-color: silver;
+#tablist-wrapper:not(.shrinked) #pinnedtablist:not(.compact) {
+    background-color: silver;
 }
 
 /* color for thumbnail border */
 #tablist-wrapper:not(.shrinked) #tablist .tab-meta-image.has-thumbnail,
-#tablist-wrapper:not(.shrinked) #pinnedtablist:not(.compact) .tab-meta-image.has-thumbnail {
-border: 2px solid silver;
+#tablist-wrapper:not(.shrinked)
+    #pinnedtablist:not(.compact)
+    .tab-meta-image.has-thumbnail {
+    border: 2px solid silver;
 }
 
 /* color for thumbnail bg color */
 #tablist-wrapper:not(.shrinked) #tablist .tab-meta-image,
-#tablist-wrapper:not(.shrinked) #pinnedtablist:not(.compact) .tab-meta-image  {
-background-color: #38383D;
+#tablist-wrapper:not(.shrinked) #pinnedtablist:not(.compact) .tab-meta-image {
+    background-color: #38383d;
 }
 
 /* Hide tabs scrollbar */
 #tablist-wrapper {
-scrollbar-width: none;
+    scrollbar-width: none;
 }
 
 /* Autohide scrollbar */
@@ -63,48 +65,48 @@ scrollbar-width: none;
     max-width: 100vw;
 }
 #tablist {
-margin-right: -19px; /* Value from KDE's Breeze theme; adjust as needed */
-transition: margin-right 0s 1s;
+    margin-right: -19px; /* Value from KDE's Breeze theme; adjust as needed */
+    transition: margin-right 0s 1s;
 }
 #tablist:hover {
-margin-right: 0px;
-transition: margin-right 0s 4s;
+    margin-right: 0px;
+    transition: margin-right 0s 4s;
 }
 #tablist-wrapper {
-overflow-x: hidden;
+    overflow-x: hidden;
 }
 /* For Firefox 64+, with no animation (hiding of scrollbar can’t be animated with scrollbar-width */
 #tablist {
-scrollbar-width: none;
+    scrollbar-width: none;
 }
 #tablist:hover {
-scrollbar-width: auto;
+    scrollbar-width: auto;
 }
 /* Thinner scrollbar */
 #tablist {
-scrollbar-width: thin;
+    scrollbar-width: thin;
 }
 
 /* Hide Top Menu */
 #topmenu {
-display: none;
+    display: none;
 }
 
 /* Hide New Tab button */
 #newtab {
-display: none;
+    display: none;
 }
 
 /* Sidebar improvements for dark theme */
 #sidebar-header {
-background: #0C0C0D;
-border-bottom: none !important;
+    background: #0c0c0d;
+    border-bottom: none !important;
 }
 #sidebar-splitter {
-border-right-color: #0C0C0D !important;
-border-left-color: #0C0C0D !important;
+    border-right-color: #0c0c0d !important;
+    border-left-color: #0c0c0d !important;
 }
 #sidebar-switcher-target,
 #sidebar-close {
-filter: invert(100%);
+    filter: invert(100%);
 }
