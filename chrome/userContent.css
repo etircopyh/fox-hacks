@@ -1,16 +1,3 @@
 /* Import styles */
-@import './import/adblock.css';
-
-
-/* Fix unreadable input fields (or you can just use fix provided by user.js) */
-input:not(.urlbar-input):not(.textbox-input):not(.form-control):not([type='checkbox']):not([type='radio']),
-textarea,
-select {
-    -moz-appearance: none !important;
-    background-color: #BEBEBE;
-    color: #191A21;
-}
-
-#downloads-indicator-counter {
-    color: green;
-}
+@import './import/userContent/adblock.css';
+@import './import/userContent/input-fix.css';
