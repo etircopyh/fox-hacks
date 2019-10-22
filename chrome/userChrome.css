@@ -1,3 +1,9 @@
+@import './import/userChrome/dark-thin-context-menu.css';
+@import './import/userChrome/more-compact-tabs.css';
+@import './import/userChrome/general_toolbar_colors.css';
+@import './import/userChrome/aboutconfig_compact_appearance.css';
+/* @import './import/userChrome/more-compact-compact.css'; */
+
 /* Add '[pdf]' next to links to PDF files */
 a[href$='.pdf']:after {
     font-size: smaller;
@@ -32,11 +38,32 @@ tab[first-visible-tab='true'][last-visible-tab='true'] {
     display: none;
 }
 
+/* PRIVATE BROWSING */
+
+window[privatebrowsingmode] .private-browsing-indicator {
+    display: none;
+}
+
+window[privatebrowsingmode] #urlbar {
+    background: #82c8 !important;
+}
+
+window[privatebrowsingmode] #identity-icon {
+    list-style-image: url(chrome://browser/skin/private-browsing.svg) !important;
+}
+
+
+
+
+#appMenu-fxa-container, #appMenu-fxa-container + toolbarseparator {
+    display: none !important;
+}
+
 /* VARIOUS FIXES */
 
 /* Dim unloaded tabs */
 .tabbrowser-tab[pending] {
-    opacity: .8;
+    opacity: 0.8;
 }
 
 /* Fixes a 1px bug after using the global menu */
