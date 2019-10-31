@@ -3,6 +3,8 @@
 @import './import/userChrome/general_toolbar_colors.css';
 @import './import/userChrome/aboutconfig_compact_appearance.css';
 /* @import './import/userChrome/more-compact-compact.css'; */
+@import './import/userChrome/dark-preloading-pages.css';
+@import './import/userChrome/URL-Bar.css';
 
 /* Add '[pdf]' next to links to PDF files */
 a[href$='.pdf']:after {
