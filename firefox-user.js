@@ -288,7 +288,7 @@ user_pref('urlclassifier.trackingTable', 'moztest-track-simple,base-track-digest
 user_pref('dom.indexedDB.enabled', true); // Enforce IndexedDB (IDB) as enabled
 user_pref('browser.cache.offline.enable', false); // Disable offline cache
 user_pref('offline-apps.allow_by_default', false); // Enforce websites to ask to store data for offline use
-// user_pref('dom.caches.enabled', false); // Disable service worker cache and cache storage
+user_pref('dom.caches.enabled', false); // Disable service worker cache and cache storage
 // user_pref('dom.storageManager.enabled', false); // Disable Storage API
 // user_pref('dom.storage_access.enabled', false); // Disable Storage Access API
 user_pref('browser.sessionstore.privacy_level', 0); // Store extra session data: 0 = for any site 1 = for unencrypted (non-HTTPS) sites only 2 = Never
