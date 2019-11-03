@@ -1,5 +1,0 @@
-#browser vbox#appcontent tabbrowser, #content, #tabbrowser-tabpanels, browser[type=content-primary], browser[type=content] > html {
-    background: #191A21 !important; 
-    background-color: #191A21 !important; 
-    color: #191A21 !important;
-}

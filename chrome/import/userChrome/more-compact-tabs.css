@@ -1,12 +1,10 @@
 /*
 Makes tabs only 22px high rather than the default 29px
 Only works on compact mode, otherwise tab height will be normal
-
-Contributor(s): DrPugsley
 */
 
 [uidensity='compact']:root {
-    --tab-min-height: 22px !important;
+    --tab-min-height: 18px !important;
     --newtab-margin: -3px 0 -3px -3px !important;
 }
 
@@ -27,7 +25,7 @@ Contributor(s): DrPugsley
 :root[uidensity='compact'] #urlbar,
 :root[uidensity='compact'] .searchbar-textbox {
     font-size: unset !important;
-    min-height: 24px !important;
+    min-height: 22px !important;
 }
 
 :root[uidensity='compact'] #identity-box {

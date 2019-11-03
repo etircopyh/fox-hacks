@@ -164,3 +164,25 @@
 #PopupAutoCompleteRichResult .autocomplete-richlistbox {
     padding-right: 0 !important;
 }
+
+/* Don't show the blue border around the url bar when focused */
+#urlbar,
+.searchbar-textbox {
+    font-size: 12pt !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* PRIVATE BROWSING */
+
+window[privatebrowsingmode] .private-browsing-indicator {
+    display: none;
+}
+
+window[privatebrowsingmode] #urlbar {
+    background: #82c8 !important;
+}
+
+window[privatebrowsingmode] #identity-icon {
+    list-style-image: url(chrome://browser/skin/private-browsing.svg) !important;
+}
