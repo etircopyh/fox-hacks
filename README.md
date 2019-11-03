@@ -1,7 +1,8 @@
 # fox-hax
-![hack-hack, cut-cut](/firefox-logo.webp)
+![Repo logo][logo]
 
 ## Screenshots
 ![Screenshot][screenshot1]
 
+[logo]: /firefox-logo.webp "Repo Logo"
 [screenshot1]: /Screenshots/foxPrivateBrowsing.png "Private Window"
