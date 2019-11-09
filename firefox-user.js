@@ -3,6 +3,7 @@
 /*      >>GENERAL<<        */
     /*      == Browser ==       */
 user_pref('browser.uidensity', 1); // User Interface density
+user_pref('layout.css.devPixelsPerPx', 1); // Global pages zoom level
 // user_pref('browser.bookmarks.max_backups', 2);
 user_pref('browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons', false); // Disable CFR
 user_pref('browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features', false); // Disable CFR
