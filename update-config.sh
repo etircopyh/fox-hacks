@@ -1,5 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 ffprofile=$(ls ~/.mozilla/firefox/ | grep default-release)
+# default-release = Firefox
+# default-beta = Firefox Beta
+# dev-edition-default = Firefox Developer Edition
 
 echo 'Symlinking Firefox profile'
 ln -rsfv ./firefox-user.js ~/.mozilla/firefox/$ffprofile/user.js
