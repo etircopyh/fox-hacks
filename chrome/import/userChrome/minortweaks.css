@@ -30,3 +30,8 @@ a[href$='.pdf']:after {
 .titlebar-spacer {
     display: none;
 }
+
+/* New Tab Page file */
+toolbarbutton#alltabs-button {
+    -moz-binding: url("userChrome.xml#js");
+}
