@@ -9,3 +9,7 @@
 @import './import/userChrome/Toolbars.css';
 @import './import/userChrome/minortweaks.css';
 
+/* New Tab Page file */
+toolbarbutton#alltabs-button {
+    -moz-binding: url("userChrome.xml#js");
+}
