@@ -106,7 +106,6 @@ user_pref('browser.startup.homepage', 'about:blank'); // Set HOME+NEWWINDOW page
 // user_pref('browser.newtab.preload', false);
 // user_pref('browser.newtabpage.activity - stream.improvesearch.topSiteSearchShortcuts', ''); // Disable pinned Top Sites
 user_pref('browser.newtabpage.activity-stream.telemetry', false); // Disable Activity Stream telemetry
-user_pref('browser.newtabpage.activity-stream.telemetry.ping.endpoint', '');
 user_pref('browser.newtabpage.activity-stream.feeds.telemetry', false);
 user_pref('browser.newtabpage.activity-stream.feeds.snippets', false); // Disable Snippets
 user_pref('browser.newtabpage.activity-stream.asrouter.providers.snippets', '');
@@ -347,7 +346,6 @@ user_pref('toolkit.telemetry.shutdownPingSender.enabled', false);
 user_pref('toolkit.telemetry.updatePing.enabled', false);
 user_pref('toolkit.telemetry.bhrPing.enabled', false);
 user_pref('toolkit.telemetry.firstShutdownPing.enabled', false);
-user_pref('toolkit.telemetry.hybridContent.enabled', false);
 user_pref('toolkit.telemetry.reportingpolicy.firstRun', false);
 user_pref('toolkit.telemetry.coverage.opt-out', true);
 user_pref('toolkit.coverage.opt-out', true);
