@@ -6,12 +6,12 @@ user_pref('browser.uidensity', 1); // User Interface density
 user_pref('layout.css.devPixelsPerPx', 1); // Global pages zoom level
 user_pref("browser.shell.shortcutFavicons", false);
 // user_pref("alerts.showFavicons", false);
-user_pref("browser.search.update", false); // Disable search update
+user_pref('browser.search.update', false); // Disable search update
 // user_pref('browser.bookmarks.max_backups', 2);
 user_pref('browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons', false); // Disable CFR
 user_pref('browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features', false); // Disable CFR
 user_pref('extensions.pocket.enabled', false); // Disable and hide Pocket
-user_pref("browser.messaging-system.whatsNewPanel.enabled", false); // What's New [FF70+]
+user_pref('browser.messaging-system.whatsNewPanel.enabled', false); // What's New [FF70+]
 // user_pref('identity.fxaccounts.enabled', false); // Disable and hide Firefox Accounts and Sync
 user_pref('network.manage-offline-status', false); // See bugzilla 620472
 user_pref('reader.parse-on-load.enabled', false); // 'Reader View'
