@@ -5,7 +5,7 @@
 user_pref('browser.uidensity', 1); // User Interface density
 user_pref('layout.css.devPixelsPerPx', 1); // Global pages zoom level
 user_pref('browser.shell.shortcutFavicons', false);
-// user_pref("alerts.showFavicons", false);
+// user_pref('alerts.showFavicons', false);
 user_pref('browser.search.update', false); // Disable search update
 // user_pref('browser.bookmarks.max_backups', 2);
 user_pref('browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons', false); // Disable CFR
@@ -86,7 +86,7 @@ user_pref('media.hls.enabled', true); // Enable HLS
 user_pref('media.peerconnection.enabled', false); //Disable WebRTC
 user_pref('media.peerconnection.ice.default_address_only', true); // Limit WebRTC IP leaks if using WebRTC
 user_pref('media.peerconnection.ice.no_host', true);
-user_pref("media.peerconnection.ice.proxy_only_if_behind_proxy", true);
+user_pref('media.peerconnection.ice.proxy_only_if_behind_proxy', true);
 // Disable VP9
 user_pref('media.peerconnection.video.vp9_enabled', false);
 user_pref('media.encoder.webm.enabled', false);
