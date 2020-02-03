@@ -4,7 +4,7 @@
     /*      == Browser ==       */
 user_pref('browser.uidensity', 1); // User Interface density
 user_pref('layout.css.devPixelsPerPx', 1); // Global pages zoom level
-user_pref("browser.shell.shortcutFavicons", false);
+user_pref('browser.shell.shortcutFavicons', false);
 // user_pref("alerts.showFavicons", false);
 user_pref('browser.search.update', false); // Disable search update
 // user_pref('browser.bookmarks.max_backups', 2);
