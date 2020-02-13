@@ -93,6 +93,7 @@ user_pref('media.encoder.webm.enabled', false);
 user_pref('media.mediasource.webm.audio.enabled', false);
 user_pref('media.mediasource.webm.enabled', false);
 user_pref('media.webm.enabled', false);
+user_pref('media.mediasource.ignore_codecs', true); // Enable H.264 MSE, amongst other things
     /*      == Downloads ==     */
 // user_pref('browser.download.folderList', 2); // Downloads directory
 user_pref('browser.download.saveLinkAsFilenameTimeout', 1000); // 'Save Link as ...' option timeout
