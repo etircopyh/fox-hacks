@@ -87,10 +87,12 @@ user_pref('media.peerconnection.enabled', false); //Disable WebRTC
 user_pref('media.peerconnection.ice.default_address_only', true); // Limit WebRTC IP leaks if using WebRTC
 user_pref('media.peerconnection.ice.no_host', true);
 user_pref('media.peerconnection.ice.proxy_only_if_behind_proxy', true);
-// Disable VP9
+// Codecs
+user_pref('media.mediasource.enabled', true);
 user_pref('media.peerconnection.video.vp9_enabled', false);
 user_pref('media.encoder.webm.enabled', false);
 user_pref('media.mediasource.webm.audio.enabled', false);
+user_pref('media.mediasource.mp4.enabled', true);
 user_pref('media.mediasource.webm.enabled', false);
 user_pref('media.webm.enabled', false);
 user_pref('media.mediasource.ignore_codecs', true); // Enable H.264 MSE, amongst other things
