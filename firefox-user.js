@@ -88,13 +88,13 @@ user_pref('media.peerconnection.ice.default_address_only', true); // Limit WebRT
 user_pref('media.peerconnection.ice.no_host', true);
 user_pref('media.peerconnection.ice.proxy_only_if_behind_proxy', true);
 // Codecs
-user_pref('media.mediasource.enabled', true);
-user_pref('media.peerconnection.video.vp9_enabled', false);
-user_pref('media.encoder.webm.enabled', false);
-user_pref('media.mediasource.webm.audio.enabled', false);
+//user_pref('media.mediasource.enabled', true);
+//user_pref('media.peerconnection.video.vp9_enabled', false);
+//user_pref('media.encoder.webm.enabled', false);
+//user_pref('media.mediasource.webm.audio.enabled', false);
 user_pref('media.mediasource.mp4.enabled', true);
-user_pref('media.mediasource.webm.enabled', false);
-user_pref('media.webm.enabled', false);
+//user_pref('media.mediasource.webm.enabled', false);
+//user_pref('media.webm.enabled', false);
 user_pref('media.mediasource.ignore_codecs', true); // Enable H.264 MSE, amongst other things
     /*      == Downloads ==     */
 // user_pref('browser.download.folderList', 2); // Downloads directory
@@ -125,6 +125,7 @@ user_pref('browser.urlbar.trimURLs', false); // Display full URL in address bar
 user_pref('browser.urlbar.clickSelectsAll', true);
 user_pref('browser.urlbar.doubleClickSelectsAll', false);
 user_pref('layout.word_select.stop_at_punctuation', true);
+user_pref('browser.urlbar.matchBuckets', 'general:5,suggestion:Infinity');
 // Disable live search suggestions
 // user_pref('browser.search.suggest.enabled', false);
 // user_pref('browser.urlbar.suggest.searches', false);
@@ -214,7 +215,7 @@ user_pref('gfx.font_rendering.graphite.enabled', false); // Disable graphite
 
 /*      >>PERFORMANCE<<     */
     /*      == General ==        */
-user_pref('gfx.webrender.all', true); // Enable WebRender
+// user_pref('gfx.webrender.all', true); // Enable WebRender
 // user_pref('layout.frame_rate', 60); // Pages FPS
 // WebGL
 user_pref('webgl.disabled', true);
@@ -228,6 +229,7 @@ user_pref('layers.geometry.d3d11.enabled', false); // Disable usage of D3D11
 user_pref('browser.preferences.defaultPerformanceSettings.enabled', false); // Disable Firefox 'recommended' performance settings
 user_pref('dom.ipc.processCount', 1); // Adjust Web Content process limit
 user_pref('browser.tabs.unloadOnLowMemory', true); // Tabs discarding
+user_pref('security.sandbox.content.level', 2); // Sandbox content level
     /*      == Cache ==        */
 user_pref('browser.cache.disk.enable', true); // Enable disk cache
 user_pref('browser.cache.disk.capacity', 524288); // Disk cache capacity: -1 = determine dynamically (default), 0 = none, n = memory capacity in kilobytes
@@ -291,7 +293,8 @@ user_pref('media.eme.enabled', false); // DRM-controlled content playback
 user_pref('network.cookie.cookieBehavior', 1); // Cookie behavior: 0 = Accept all cookies 1 = Block third-party cookies 2 = Block all cookies
 user_pref('network.cookie.thirdparty.sessionOnly', true); // Set third-party cookies to session-only
 user_pref('network.cookie.thirdparty.nonsecureSessionOnly', true);
-user_pref('urlclassifier.trackingTable', 'moztest-track-simple,base-track-digest256,content-track-digest256');
+user_pref('urlclassifier.trackingTable', '');
+// user_pref('urlclassifier.trackingTable', 'moztest-track-simple,base-track-digest256,content-track-digest256');
 // user_pref('network.cookie.lifetimePolicy', 2); // Delete cookies on browser close
 // user_pref('dom.storage.enabled', false); // Disable DOM Storage
 user_pref('dom.indexedDB.enabled', true); // Enforce IndexedDB (IDB) as enabled
