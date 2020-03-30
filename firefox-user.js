@@ -2,6 +2,8 @@
 
 /*      >>GENERAL<<        */
     /*      == Browser ==       */
+user_pref('app.update.auto', false);
+user_pref('app.update.url', '');
 user_pref('browser.uidensity', 1); // User Interface density
 user_pref('layout.css.devPixelsPerPx', 1); // Global pages zoom level
 user_pref('browser.shell.shortcutFavicons', false);
@@ -17,6 +19,7 @@ user_pref('network.manage-offline-status', false); // See bugzilla 620472
 user_pref('reader.parse-on-load.enabled', false); // 'Reader View'
 // user_pref('xpinstall.signatures.required', false); // Enforced extension signing
 user_pref('browser.backspace_action', 2); // 0 = previous page, 1 = scroll up, 2 = do nothing
+user_pref("browser.display.use_system_colors", false); // Enforce no system colors
 user_pref('browser.tabs.closeWindowWithLastTab', false);
 user_pref('browser.tabs.loadBookmarksInTabs', true); // Open bookmarks in a new tab
 user_pref('browser.urlbar.decodeURLsOnCopy', true); // See bugzilla 1320061
@@ -47,7 +50,7 @@ user_pref('devtools.theme', 'dark'); // DevTools Dark Mode
 // Dark input fields fix (for Plasma DE)
 // user_pref('widget.chrome.allow-gtk-dark-theme', true);
 // user_pref('widget.content.allow-gtk-dark-theme', true);
-// user_pref('widget.content.gtk-theme-override', 'Breeze');
+// user_pref('widget.content.gtk-theme-override', 'Breeze:light');
     /*      == Add-ons ==       */
 user_pref('plugin.state.flash', 0); // Disable Flash Player NPAPI plugin
 user_pref('plugin.state.java', 0); // Disable Java NPAPI plugin
@@ -106,10 +109,11 @@ user_pref('browser.download.hide_plugins_without_extensions', false); // Disable
     /*      == New Tab Page ==      */
 user_pref('browser.startup.homepage', 'about:blank'); // Set HOME+NEWWINDOW page: about:home=Activity Stream (default), custom URL, about:blank
 // user_pref('browser.newtabpage.enabled', false); // Set NEWTAB page: true=Activity Stream (default), false=blank page
-// user_pref('browser.newtab.preload', false);
+user_pref('browser.newtab.preload', false);
 // user_pref('browser.newtabpage.activity - stream.improvesearch.topSiteSearchShortcuts', ''); // Disable pinned Top Sites
 user_pref('browser.newtabpage.activity-stream.telemetry', false); // Disable Activity Stream telemetry
 user_pref('browser.newtabpage.activity-stream.feeds.telemetry', false);
+user_pref('browser.newtabpage.activity-stream.filterAdult', false);
 user_pref('browser.newtabpage.activity-stream.feeds.snippets', false); // Disable Snippets
 user_pref('browser.newtabpage.activity-stream.asrouter.providers.snippets', '');
 user_pref('browser.newtabpage.activity-stream.feeds.section.topstories', false); // Disable 'Recommended by Pocket'
@@ -117,6 +121,7 @@ user_pref('browser.newtabpage.activity-stream.section.highlights.includePocket',
 user_pref('browser.newtabpage.activity-stream.showSponsored', false); // Disable sponsored content
 user_pref('browser.newtabpage.activity-stream.feeds.discoverystreamfeed', false);
 user_pref('browser.library.activity-stream.enabled', false); // Disable recent Highlights in the Library
+user_pref('browser.aboutHomeSnippets.updateUrl', '');
     /*      == URL bar ==       */
 // user_pref('keyword.enabled', false); // Disable location bar using search
 // user_pref('browser.fixup.alternate.enabled', false); // Disable location bar domain guessing
@@ -217,6 +222,7 @@ user_pref('gfx.font_rendering.graphite.enabled', false); // Disable graphite
     /*      == General ==        */
 // user_pref('gfx.webrender.all', true); // Enable WebRender
 // user_pref('layout.frame_rate', 60); // Pages FPS
+user_pref('gfx.canvas.azure.accelerated', true);
 // WebGL
 user_pref('webgl.disabled', true);
 user_pref('webgl.enable-webgl2', false);
@@ -227,7 +233,7 @@ user_pref('webgl.disable-fail-if-major-performance-caveat', true);
 user_pref('webgl.msaa-samples', 0);
 user_pref('layers.geometry.d3d11.enabled', false); // Disable usage of D3D11
 user_pref('browser.preferences.defaultPerformanceSettings.enabled', false); // Disable Firefox 'recommended' performance settings
-user_pref('dom.ipc.processCount', 1); // Adjust Web Content process limit
+// user_pref('dom.ipc.processCount', 1); // Adjust Web Content process limit
 user_pref('browser.tabs.unloadOnLowMemory', true); // Tabs discarding
 user_pref('security.sandbox.content.level', 2); // Sandbox content level
     /*      == Cache ==        */
@@ -247,7 +253,7 @@ user_pref('network.http.altsvc.oe', false);
 user_pref('network.proxy.type', 0); // Disable looking for system proxy
 user_pref('network.proxy.socks_remote_dns', true); // Enforce the proxy server to do any DNS lookups when using SOCKS
 user_pref('network.tcp.tcp_fastopen_enable', true); // Speed up the opening of successive TCP connections between two endpoints
-user_pref('network.trr.mode', 2); // Enable DNS over HTTPS
+// user_pref('network.trr.mode', 2); // Enable DNS over HTTPS
 // user_pref('network.trr.bootstrapAddress', '1.1.1.1');
 // user_pref('network.trr.uri', 'https://cloudflare-dns.com/dns-query'); // DoH Server | https://github.com/curl/curl/wiki/DNS-over-HTTPS
 user_pref('network.trr.resolvers', '[{ "name": "Cloudflare (non-Mozilla)", "url": "https://cloudflare-dns.com/dns-query" },{ "name": "Cloudflare", "url": "https://mozilla.cloudflare-dns.com/dns-query" },{ "name": "Google", "url": "https://dns.google/dns-query" },{ "name": "Cisco/OpenDNS", "url": "https://doh.opendns.com/dns-query" },{ "name": "Adguard", "url": "https://dns.adguard.com/dns-query" },{ "name": "Adguard Family Protection", "url": "https://dns-family.adguard.com/dns-query" },{ "name": "DNSWarden Adblock", "url": "https://doh.dnswarden.com/adblock" },{ "name": "DNSWarden Uncensored", "url": "https://doh.dnswarden.com/uncensored" },{ "name": "SecureDNS", "url": "https://doh.securedns.eu/dns-query" },{ "name": "AppliedPrivacy", "url": "https://doh.appliedprivacy.net/query" },{ "name": "Digitale Gesellschaft (CH)", "url": "https://dns.digitale-gesellschaft.ch/dns-query" }, { "name": "Quad9", "url": "https://dns.quad9.net/dns-query" }]'); // DoH Resolvers
@@ -268,6 +274,7 @@ user_pref('security.ssl.require_safe_negotiation', true); // Disable old SSL/TLS
 // Control TLS versions (Firefox telemetry (April 2019) shows only 0.5% of TLS web traffic uses 1.0 or 1.1) 1=TLS 1.0, 2=TLS 1.1, 3=TLS 1.2, 4=TLS 1.3
 user_pref('security.tls.version.min', 3);
 user_pref('security.tls.version.max', 4);
+user_pref("security.tls.version.enable-deprecated", false); // Enforce TLS 1.0 and 1.1 downgrades as session only
 user_pref('security.ssl.disable_session_identifiers', true); // Disable SSL session tracking [FPI]
 user_pref('security.ssl.errorReporting.automatic', false);
 user_pref('security.ssl.errorReporting.enabled', false);
@@ -361,6 +368,9 @@ user_pref('datareporting.healthreport.service.enabled', false); // Disable Healt
 user_pref('datareporting.healthreport.uploadEnabled', false);
 user_pref('datareporting.healthreport.infoURL', '');
 user_pref('datareporting.policy.dataSubmissionEnabled', false);
+user_pref('browser.contentblocking.report.cookie.url', '');
+user_pref('browser.contentblocking.report.cryptominer.url', '');
+user_pref('browser.contentblocking.report.fingerprinter.url', '');
 user_pref('app.shield.optoutstudies.enabled', false);
 user_pref('extensions.getAddons.showPane', false); // Disable about:addons' Recommendations pane (uses Google Analytics)
 user_pref('extensions.htmlaboutaddons.recommendations.enabled', false); // Disable recommendations in about:addons' Extensions and Themes panes
@@ -386,6 +396,7 @@ user_pref('permissions.default.geo', 2); // Location permissions: 0 = always ask
 user_pref('browser.search.region', 'US'); // US region for search engine
 user_pref('browser.search.countryCode', 'US');
 user_pref('browser.search.geoip.url', '');
+user_pref('geo.wifi.uri', '');
 user_pref('browser.search.geoSpecificDefaults', false); // Disable geographically specific results/search engines
 user_pref('browser.search.geoSpecificDefaults.url', '');
 // Disable using the OS's geolocation service
@@ -421,6 +432,8 @@ user_pref('browser.startup.blankWindow', false); // Disable showing about:blank 
 // user_pref('dom.enable_resource_timing', false); // Disable resource/navigation timing
 // user_pref('dom.enable_performance', false); // Disable timing attacks
 user_pref('device.sensors.enabled', false); // Disable device sensor API
+user_pref('device.sensors.motion.enabled', false);
+user_pref('device.sensors.orientation.enabled', false);
 // user_pref('browser.zoom.siteSpecific', false); // Disable site specific zoom
 user_pref('dom.gamepad.enabled', false); // Disable gamepad API - USB device ID enumeration
 user_pref('dom.netinfo.enabled', false); // Disable giving away network info
