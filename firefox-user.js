@@ -117,6 +117,7 @@ user_pref('browser.newtabpage.activity-stream.filterAdult', false);
 user_pref('browser.newtabpage.activity-stream.feeds.snippets', false); // Disable Snippets
 user_pref('browser.newtabpage.activity-stream.asrouter.providers.snippets', '');
 user_pref('browser.newtabpage.activity-stream.feeds.section.topstories', false); // Disable 'Recommended by Pocket'
+// user_pref("browser.newtabpage.activity-stream.feeds.topsites", false); // Disable Activity Stream Top Sites
 user_pref('browser.newtabpage.activity-stream.section.highlights.includePocket', false);
 user_pref('browser.newtabpage.activity-stream.showSponsored', false); // Disable sponsored content
 user_pref('browser.newtabpage.activity-stream.feeds.discoverystreamfeed', false);
@@ -393,6 +394,7 @@ user_pref('dom.popup_allowed_events', 'click dblclick'); // Limit events that ca
     /*      == Geolocation ==       */
 user_pref('geo.enabled', false); // Location-Aware Browsing
 user_pref('permissions.default.geo', 2); // Location permissions: 0 = always ask (default), 1 = allow, 2 = block
+user_pref("permissions.delegation.enabled", false); // Disable permissions delegation
 user_pref('browser.search.region', 'US'); // US region for search engine
 user_pref('browser.search.countryCode', 'US');
 user_pref('browser.search.geoip.url', '');
