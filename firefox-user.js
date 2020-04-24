@@ -29,6 +29,8 @@ user_pref('ui.key.menuAccessKey', 0); // Disable alt key toggling the menu bar
 // user_pref('accessibility.typeaheadfind', true); // Enable 'Find As You Type'
 user_pref('clipboard.autocopy', false); // Disable autocopy default [LINUX]
 user_pref('layout.spellcheckDefault', 2); // 0 = none, 1 = multi-line, 2 = multi-line & single-line
+user_pref("browser.privatebrowsing.forceMediaMemoryCache", true); // Disable media cache from writing to disk in Private Browsing
+user_pref("media.memory_cache_max_size", 16384);
     /*      == Crash reports ==     */
 user_pref('dom.ipc.plugins.flash.subprocess.crashreporter.enabled', false); // Disable sending Flash crash reports
 user_pref('dom.ipc.plugins.reportCrashURL', false); // Disable sending the URL of the website where a plugin crashed
@@ -347,6 +349,7 @@ user_pref('javascript.options.asmjs', false); // Disable asmjs
 // user_pref('javascript.options.ion', false);
 // user_pref('javascript.options.baselinejit', false);
 user_pref('javascript.options.wasm', false); // Disable WebAssembly
+// user_pref("javascript.options.jit_trustedprincipals", true);
 user_pref('dom.targetBlankNoOpener.enabled', true); // Enable (limited but sufficient) window.opener protection
     /*      == Telemetry >_< ==        */
 user_pref('toolkit.telemetry.unified', false);
