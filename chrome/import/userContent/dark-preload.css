@@ -1,0 +1,3 @@
+/*  */
+@-moz-document url(about:blank) { html { background-color: rgb(19,19,20) !important; } }
+@-moz-document url-prefix(about:blank) { * { background-color: rgb(19,19,20); } }

@@ -3,7 +3,7 @@
 @import './import/userChrome/general_toolbar_colors.css';
 @import './import/userChrome/aboutconfig_compact_appearance.css';
 /* @import './import/userChrome/more-compact-compact.css'; */
-@import './import/userChrome/dark-preloading-pages.css';
+/* @import './import/userChrome/dark-preloading-pages.css'; */
 @import './import/userChrome/TABS.css';
 @import './import/userChrome/URL-Bar.css';
 @import './import/userChrome/Toolbars.css';
@@ -11,5 +11,5 @@
 
 /* New Tab Page file */
 toolbarbutton#alltabs-button {
-    -moz-binding: url("userChrome.xml#js");
+    -moz-binding: url('userChrome.xml#js');
 }

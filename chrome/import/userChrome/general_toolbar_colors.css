@@ -46,7 +46,7 @@ toolbar:not(#TabsToolbar):not(#toolbar-menubar):not(#nav-bar):not(:-moz-lwtheme)
     text-shadow: 1px 1px 1px var(--general_toolbar_text_shadow, inherit) !important;
 }
 
-/* findbar */
+/* Findbar */
 #main-window
     :-moz-any(.browserContainer, #viewSource):not(:-moz-lwtheme)
     :-moz-any(findbar, #FindToolbar) {
@@ -74,7 +74,7 @@ toolbar:not(#TabsToolbar):not(#toolbar-menubar):not(#nav-bar):not(:-moz-lwtheme)
     text-shadow: 1px 1px 1px black !important;
 }
 
-/* fix Firefox + Windows 8.1 + lw-theme bug (occurring without custom code too) */
+/* Fix Firefox + Windows 8.1 + lw-theme bug (occurring without custom code too) */
 @media (-moz-os-version: windows-win8) {
     #navigator-toolbox:-moz-lwtheme {
         border: unset !important;
