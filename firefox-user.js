@@ -242,7 +242,7 @@ user_pref('security.sandbox.content.level', 2); // Sandbox content level
     /*      == Cache ==        */
 user_pref('browser.cache.disk.enable', true); // Enable disk cache
 user_pref('browser.cache.disk.capacity', 524288); // Disk cache capacity: -1 = determine dynamically (default), 0 = none, n = memory capacity in kilobytes
-user_pref('browser.cache.disk.parent_directory', '/tmp/firefox-cache'); // Write cache to RAM (tmpfs) instead of SSD / HDD
+user_pref('browser.cache.disk.parent_directory', '/run/user/1000/firefox-cache'); // Write cache to RAM (tmpfs) instead of SSD / HDD
 // user_pref('browser.cache.memory.enable', false); // Disable memory cache
 // user_pref('browser.cache.memory.capacity', 0); // Memory cache capacity: -1 = determine dynamically (default), 0 = none, n = memory capacity in kilobytes
 // user_pref('browser.cache.compression_level', 1); // Cache compression level: 1-9 (CPU dependant)
