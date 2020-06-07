@@ -48,6 +48,7 @@ user_pref('svg.context-properties.content.enabled', true);
 user_pref('browser.tabs.drawInTitlebar', true); // Enable CSD
 user_pref('browser.in-content.dark-mode', true); // Dark Mode
 user_pref('ui.systemUsesDarkTheme', 1);
+user_pref("ui.prefersReducedMotion", 0);
 user_pref('devtools.theme', 'dark'); // DevTools Dark Mode
 // Dark input fields fix (for Plasma DE)
 // user_pref('widget.chrome.allow-gtk-dark-theme', true);
@@ -212,7 +213,7 @@ user_pref('media.videocontrols.picture-in-picture.enabled', true);
 user_pref('media.videocontrols.picture-in-picture.video-toggle.enabled', true);
 user_pref('media.videocontrols.picture-in-picture.video-toggle.always-show', true);
 /*      == Fonts ==     */
-// user_pref('browser.display.use_document_fonts', 0); // Disable websites choosing fonts (0=block, 1=allow)
+// user_pref('browser.display.use_document_fonts', 0); // Disable websites choosing fonts (0=block, 1=allow) NOTE: Can break some PDFs
 // Disable icon fonts (glyphs) and local fallback rendering
 // user_pref('gfx.downloadable_fonts.enabled', false);
 // user_pref('gfx.downloadable_fonts.fallback_delay', -1);
@@ -262,7 +263,7 @@ user_pref('network.tcp.tcp_fastopen_enable', true); // Speed up the opening of s
 user_pref('network.trr.resolvers', '[{ "name": "Cloudflare (non-Mozilla)", "url": "https://cloudflare-dns.com/dns-query" },{ "name": "Cloudflare", "url": "https://mozilla.cloudflare-dns.com/dns-query" },{ "name": "Google", "url": "https://dns.google/dns-query" },{ "name": "Cisco/OpenDNS", "url": "https://doh.opendns.com/dns-query" },{ "name": "Adguard", "url": "https://dns.adguard.com/dns-query" },{ "name": "Adguard Family Protection", "url": "https://dns-family.adguard.com/dns-query" },{ "name": "DNSWarden Adblock", "url": "https://doh.dnswarden.com/adblock" },{ "name": "DNSWarden Uncensored", "url": "https://doh.dnswarden.com/uncensored" },{ "name": "SecureDNS", "url": "https://doh.securedns.eu/dns-query" },{ "name": "AppliedPrivacy", "url": "https://doh.appliedprivacy.net/query" },{ "name": "Digitale Gesellschaft (CH)", "url": "https://dns.digitale-gesellschaft.ch/dns-query" }, { "name": "Quad9", "url": "https://dns.quad9.net/dns-query" }]'); // DoH Resolvers
 user_pref('network.security.esni.enabled', true); // Enable ESNI
 user_pref('network.ftp.enabled', false); // Disable FTP
-user_pref('network.file.disable_unc_paths', true); // Disable using UNC (Uniform Naming Convention) paths
+user_pref('network.file.disable_unc_paths', false); // Disable using UNC (Uniform Naming Convention) paths NOTE: Can cause extension storage to fail
 user_pref('network.gio.supported-protocols', ''); // Disable GIO as a potential proxy bypass vector
 // Disable resource preloading / prefetch
 user_pref('network.dns.disablePrefetch', true);
@@ -296,6 +297,8 @@ user_pref('captivedetect.canonicalURL', '');
 user_pref('network.captive-portal-service.enabled', false);
 user_pref('network.connectivity-service.enabled', false); // Disable Network Connectivity checks
     /*      == Privacy ==       */
+// user_pref("dom.security.https_only_mode", true); // Enable HTTPS only mode
+// user_pref("dom.security.https_only_mode.upgrade_local", true);
 // user_pref('layout.css.visited_links_enabled', false); // Disable coloring of visited links - CSS history leak
 user_pref('browser.send_pings', false); // Disable 'Hyperlink auditing'
 user_pref('browser.send_pings.require_same_host', true);
@@ -339,7 +342,7 @@ user_pref('dom.push.enabled', false); // Disable Push Notifications
 // user_pref('dom.push.userAgentID', ''); // To remove all notification subscriptions
 user_pref('permissions.default.desktop-notification', 2); // Disable desktop notifications
 user_pref('dom.event.contextmenu.enabled', false); // Disable website control over browser right-click context menu
-user_pref('dom.event.clipboardevents.enabled', false); // Disable website access to clipboard events/content
+// user_pref('dom.event.clipboardevents.enabled', false); // Disable website access to clipboard events/content NOTE: Can break some websites functionality
 user_pref('middlemouse.paste', false); // Disable middlemouse paste leaking clipboard content on Linux after autoscroll
 user_pref('dom.allow_cut_copy', false); // Disable clipboard commands (cut/copy) from 'non-privileged' content
 user_pref('dom.disable_beforeunload', true); // Disable 'Confirm you want to leave' dialog on page close
