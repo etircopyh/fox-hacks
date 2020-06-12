@@ -23,7 +23,7 @@ user_pref("browser.display.use_system_colors", false); // Enforce no system colo
 user_pref('browser.tabs.closeWindowWithLastTab', false);
 user_pref('browser.tabs.loadBookmarksInTabs', true); // Open bookmarks in a new tab
 user_pref('browser.urlbar.decodeURLsOnCopy', true); // See bugzilla 1320061
-// user_pref('general.autoScroll', false); // Middle-click enabling auto-scrolling [WINDOWS] [MAC]
+user_pref('general.autoScroll', true); // Middle-click enabling auto-scrolling
 user_pref('ui.key.menuAccessKey', 0); // Disable alt key toggling the menu bar
 // user_pref('view_source.tab', false); // View 'page/selection source' in a new window
 // user_pref('accessibility.typeaheadfind', true); // Enable 'Find As You Type'
