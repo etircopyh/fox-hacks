@@ -217,7 +217,7 @@ user_pref('media.videocontrols.picture-in-picture.video-toggle.always-show', tru
 // Disable icon fonts (glyphs) and local fallback rendering
 // user_pref('gfx.downloadable_fonts.enabled', false);
 // user_pref('gfx.downloadable_fonts.fallback_delay', -1);
-user_pref('font.name-list.emoji', 'Apple Color Emoji'); // Change Firefox emoji set (default = 'Twemoji Mozilla')
+user_pref('font.name-list.emoji', 'emoji'); // Change Firefox emoji set (default = 'Twemoji Mozilla', system set = 'emoji')
 user_pref('gfx.font_rendering.opentype_svg.enabled', false); // Disable rendering of SVG OpenType fonts
 user_pref('gfx.font_rendering.graphite.enabled', false); // Disable graphite
 // user_pref('layout.css.font-loading-api.enabled', false); // Disable Font Face loading (from external resources like Google Fonts)
