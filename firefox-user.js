@@ -45,7 +45,7 @@ user_pref('browser.download.autohideButton', false); // Always display Downloads
 user_pref('toolkit.cosmeticAnimations.enabled', false); // Disable some animations
 user_pref('toolkit.legacyUserProfileCustomizations.stylesheets', true); // Allow userChrome/userContent
 user_pref('svg.context-properties.content.enabled', true);
-user_pref('browser.tabs.drawInTitlebar', true); // Enable CSD
+user_pref('browser.tabs.drawInTitlebar', false); // Enable CSD
 user_pref('browser.in-content.dark-mode', true); // Dark Mode
 user_pref('ui.systemUsesDarkTheme', 1);
 user_pref("ui.prefersReducedMotion", 0);
