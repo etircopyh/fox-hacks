@@ -152,6 +152,7 @@ user_pref('browser.urlbar.suggest.topsites', false);
 // Disable live search suggestions
 // user_pref('browser.search.suggest.enabled', false);
 // user_pref('browser.urlbar.suggest.searches', false);
+user_pref('browser.urlbar.usepreloadedtopurls.enabled', false); // Disable location bar suggesting 'preloaded' top websites
 user_pref('browser.urlbar.speculativeConnect.enabled', false); // Disable location bar making speculative connections
 // Disable location bar suggestion types
 // user_pref('browser.urlbar.suggest.history', false);
