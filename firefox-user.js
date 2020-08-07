@@ -17,22 +17,23 @@ user_pref('browser.messaging-system.whatsNewPanel.enabled', false); // What's Ne
 // user_pref('identity.fxaccounts.enabled', false); // Disable and hide Firefox Accounts and Sync
 user_pref('network.manage-offline-status', false); // See bugzilla 620472
 user_pref('reader.parse-on-load.enabled', false); // 'Reader View'
-user_pref('reader.color_scheme', 'dark')
+user_pref('reader.color_scheme', 'dark'); // Reader View Dark Color scheme
 // user_pref('xpinstall.signatures.required', false); // Enforced extension signing
 user_pref('browser.backspace_action', 2); // 0 = previous page, 1 = scroll up, 2 = do nothing
-user_pref("browser.display.use_system_colors", false); // Enforce no system colors
+user_pref('browser.display.use_system_colors', false); // Enforce no system colors
+user_pref('browser.tabs.insertAfterCurrent', true); // Open new tab right after current
 user_pref('browser.tabs.closeWindowWithLastTab', false);
 user_pref('browser.tabs.loadBookmarksInTabs', false); // Open bookmarks in a new tab
 user_pref('browser.urlbar.decodeURLsOnCopy', true); // See bugzilla 1320061
-user_pref("browser.urlbar.dnsResolveSingleWordsAfterSearch", 0); // Disable location bar leaking single words to a DNS provider
+user_pref('browser.urlbar.dnsResolveSingleWordsAfterSearch', 0); // Disable location bar leaking single words to a DNS provider
 user_pref('general.autoScroll', true); // Middle-click enabling auto-scrolling
 user_pref('ui.key.menuAccessKey', 0); // Disable alt key toggling the menu bar
 // user_pref('view_source.tab', false); // View 'page/selection source' in a new window
 // user_pref('accessibility.typeaheadfind', true); // Enable 'Find As You Type'
 user_pref('clipboard.autocopy', false); // Disable autocopy default [LINUX]
 user_pref('layout.spellcheckDefault', 2); // 0 = none, 1 = multi-line, 2 = multi-line & single-line
-user_pref("browser.privatebrowsing.forceMediaMemoryCache", true); // Disable media cache from writing to disk in Private Browsing
-user_pref("media.memory_cache_max_size", 65536);
+user_pref('browser.privatebrowsing.forceMediaMemoryCache', true); // Disable media cache from writing to disk in Private Browsing
+user_pref('media.memory_cache_max_size', 65536);
     /*      == Crash reports ==     */
 user_pref('dom.ipc.plugins.flash.subprocess.crashreporter.enabled', false); // Disable sending Flash crash reports
 user_pref('dom.ipc.plugins.reportCrashURL', false); // Disable sending the URL of the website where a plugin crashed
@@ -51,7 +52,7 @@ user_pref('browser.tabs.tabMinWidth', 100); // Tabs width
 user_pref('browser.tabs.drawInTitlebar', false); // Client-Side Decoration
 user_pref('browser.in-content.dark-mode', true); // Dark Mode
 user_pref('ui.systemUsesDarkTheme', 1);
-user_pref("ui.prefersReducedMotion", 1);
+user_pref('ui.prefersReducedMotion', 1);
 user_pref('devtools.theme', 'dark'); // DevTools Dark Mode
 // Dark input fields fix (for Plasma DE)
 user_pref('widget.chrome.allow-gtk-dark-theme', true);
@@ -89,11 +90,11 @@ user_pref('media.getusermedia.aec_enabled', false);
 user_pref('media.getusermedia.noise_enabled', false);
 user_pref('permissions.default.camera', 2); // Block camera access
 user_pref('permissions.default.microphone', 2); // Block microphone access
-user_pref("permissions.default.xr", 2); // Block virtual reality devices
+user_pref('permissions.default.xr', 2); // Block virtual reality devices
 user_pref('media.autoplay.default', 5); // Disable Autoplay
 user_pref('media.autoplay.block-event.enabled', true);
 user_pref('media.autoplay.block-webaudio', true);
-user_pref("media.autoplay.blocking_policy", 2); // Disable autoplay of HTML5 media if you interacted with the site
+user_pref('media.autoplay.blocking_policy', 2); // Disable autoplay of HTML5 media if you interacted with the site
 // user_pref('media.autoplay.enabled.user-gestures-needed', false);
 user_pref('media.block-autoplay-until-in-foreground', true);
 user_pref('media.hls.enabled', true); // Enable HLS
@@ -122,24 +123,25 @@ user_pref('browser.download.hide_plugins_without_extensions', false); // Disable
 user_pref('browser.startup.homepage', 'about:blank'); // Set HOME+NEWWINDOW page: about:home=Activity Stream (default), custom URL, about:blank
 // user_pref('browser.newtabpage.enabled', false); // Set NEWTAB page: true=Activity Stream (default), false=blank page
 user_pref('browser.newtab.preload', false);
-// user_pref('browser.newtabpage.activity - stream.improvesearch.topSiteSearchShortcuts', ''); // Disable pinned Top Sites
+// user_pref('browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts', ''); // Disable pinned Top Sites
+user_pref('browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar', true); // Search bar within NTP
 user_pref('browser.newtabpage.activity-stream.telemetry', false); // Disable Activity Stream telemetry
 user_pref('browser.newtabpage.activity-stream.feeds.telemetry', false);
 user_pref('browser.newtabpage.activity-stream.filterAdult', false);
 user_pref('browser.newtabpage.activity-stream.feeds.snippets', false); // Disable Snippets
 user_pref('browser.newtabpage.activity-stream.asrouter.providers.snippets', '');
 user_pref('browser.newtabpage.activity-stream.feeds.section.topstories', false); // Disable 'Recommended by Pocket'
-// user_pref("browser.newtabpage.activity-stream.feeds.topsites", false); // Disable Activity Stream Top Sites
+// user_pref('browser.newtabpage.activity-stream.feeds.topsites', false); // Disable Activity Stream Top Sites
 user_pref('browser.newtabpage.activity-stream.section.highlights.includePocket', false);
 user_pref('browser.newtabpage.activity-stream.showSponsored', false); // Disable sponsored content
 user_pref('browser.newtabpage.activity-stream.feeds.discoverystreamfeed', false);
-user_pref("browser.newtabpage.activity-stream.default.sites", ""); // Clear default topsites (with possibility to add your own)
+user_pref('browser.newtabpage.activity-stream.default.sites', ''); // Clear default topsites (with possibility to add your own)
 user_pref('browser.library.activity-stream.enabled', false); // Disable recent Highlights in the Library
 user_pref('browser.aboutHomeSnippets.updateUrl', '');
     /*      == URL bar ==       */
 // user_pref('keyword.enabled', false); // Disable location bar using search
 // user_pref('browser.fixup.alternate.enabled', false); // Disable location bar domain guessing
-user_pref("browser.fixup.hide_user_pass", true);
+user_pref('browser.fixup.hide_user_pass', true);
 user_pref('browser.urlbar.trimURLs', false); // Display full URL in address bar
 // URL bar mouse-clicks behavior
 user_pref('browser.urlbar.clickSelectsAll', true);
@@ -175,7 +177,7 @@ user_pref('dom.webnotifications.enabled', false);
 user_pref('devtools.debugger.remote-enabled', false);
 user_pref('devtools.webide.enabled', false);
 user_pref('devtools.webide.autoinstallADBExtension', false);
-user_pref("devtools.webide.autoinstallFxdtAdapters", false);
+user_pref('devtools.webide.autoinstallFxdtAdapters', false);
 user_pref('devtools.debugger.force-local', true);
 user_pref('mathml.disabled', true); // Disable MathML
 // user_pref('svg.disabled', true); // Disable in-content SVG
@@ -231,7 +233,7 @@ user_pref('media.videocontrols.picture-in-picture.video-toggle.enabled', true);
 // Disable icon fonts (glyphs) and local fallback rendering
 // user_pref('gfx.downloadable_fonts.enabled', false);
 // user_pref('gfx.downloadable_fonts.fallback_delay', -1);
-user_pref("layout.css.font-visibility.level", 1); // Limit font visibility level
+user_pref('layout.css.font-visibility.level', 1); // Limit font visibility level
 user_pref('font.name-list.emoji', 'emoji'); // Change Firefox emoji set (default = 'Twemoji Mozilla', system set = 'emoji')
 user_pref('gfx.font_rendering.opentype_svg.enabled', false); // Disable rendering of SVG OpenType fonts
 user_pref('gfx.font_rendering.graphite.enabled', false); // Disable graphite
@@ -257,11 +259,11 @@ user_pref('browser.preferences.defaultPerformanceSettings.enabled', false); // D
 user_pref('browser.tabs.unloadOnLowMemory', true); // Tabs discarding
 user_pref('security.sandbox.content.level', 2); // Sandbox content level
 // Wayland VA-API
-+ user_pref('widget.wayland-dmabuf-vaapi.enabled', true);
-+ user_pref('media.ffvpx.enabled', false); // Disable bundled FFmpeg
+user_pref('widget.wayland-dmabuf-vaapi.enabled', true);
+// user_pref('media.ffvpx.enabled', false); // Disable bundled FFmpeg
     /*      == Cache ==        */
 user_pref('browser.cache.disk.enable', true); // Enable disk cache
-user_pref("browser.cache.disk_cache_ssl", false);
+user_pref('browser.cache.disk_cache_ssl', false);
 user_pref('browser.cache.disk.capacity', 524288); // Disk cache capacity: -1 = determine dynamically (default), 0 = none, n = memory capacity in kilobytes
 user_pref('browser.cache.disk.parent_directory', '/run/user/1000/firefox-cache'); // Write cache to RAM (tmpfs) instead of SSD / HDD
 // user_pref('browser.cache.memory.enable', false); // Disable memory cache
@@ -298,7 +300,7 @@ user_pref('security.ssl.require_safe_negotiation', true); // Disable old SSL/TLS
 // Control TLS versions (Firefox telemetry (April 2019) shows only 0.5% of TLS web traffic uses 1.0 or 1.1) 1=TLS 1.0, 2=TLS 1.1, 3=TLS 1.2, 4=TLS 1.3
 user_pref('security.tls.version.min', 3);
 user_pref('security.tls.version.max', 4);
-user_pref("security.tls.version.enable-deprecated", false); // Enforce TLS 1.0 and 1.1 downgrades as session only
+user_pref('security.tls.version.enable-deprecated', false); // Enforce TLS 1.0 and 1.1 downgrades as session only
 user_pref('security.ssl.disable_session_identifiers', true); // Disable SSL session tracking [FPI]
 user_pref('security.ssl.errorReporting.automatic', false);
 user_pref('security.ssl.errorReporting.enabled', false);
@@ -317,8 +319,8 @@ user_pref('security.cert_pinning.enforcement_level', 2); // PKP (Public Key Pinn
 // user_pref('network.captive-portal-service.enabled', false);
 // user_pref('network.connectivity-service.enabled', false); // Disable Network Connectivity checks
     /*      == Privacy ==       */
-// user_pref("dom.security.https_only_mode", true); // Enable HTTPS only mode
-// user_pref("dom.security.https_only_mode.upgrade_local", true);
+// user_pref('dom.security.https_only_mode', true); // Enable HTTPS only mode
+// user_pref('dom.security.https_only_mode.upgrade_local', true);
 // user_pref('layout.css.visited_links_enabled', false); // Disable coloring of visited links - CSS history leak
 user_pref('browser.send_pings', false); // Disable 'Hyperlink auditing'
 user_pref('browser.send_pings.require_same_host', true);
@@ -343,8 +345,8 @@ user_pref('privacy.userContext.enabled', true); // Enable Container Tabs
 user_pref('privacy.userContext.ui.enabled', true); // Enable Container Tabs setting in preferences
 user_pref('privacy.usercontext.about_newtab_segregation.enabled', true); // Enable a private container for thumbnail loads
 user_pref('privacy.userContext.longPressBehavior', 2); // Set behavior on '+ Tab' button to display container menu: 0=no menu (default), 1=show when clicked, 2=show on long press
-user_pref("privacy.spoof_english", 2); // If Accept-Language should be spoofed by en-US: 0 - will prompt (default), 1 - don't spoof, 2 - spoof
-user_pref("privacy.partition.network_state", true); // Site partitioning
+user_pref('privacy.spoof_english', 2); // If Accept-Language should be spoofed by en-US: 0 - will prompt (default), 1 - don't spoof, 2 - spoof
+user_pref('privacy.partition.network_state', true); // Site partitioning
 // Referer
 user_pref('network.http.sendRefererHeader', 2); // Control when images/links send a referer: 0 = never, 1 = send only when links are clicked, 2 = for links and images (default)
 user_pref('network.http.referer.spoofSource', true); // Enable spoofing a referer
@@ -370,12 +372,12 @@ user_pref('middlemouse.paste', false); // Disable middlemouse paste leaking clip
 user_pref('dom.allow_cut_copy', false); // Disable clipboard commands (cut/copy) from 'non-privileged' content
 user_pref('dom.disable_beforeunload', true); // Disable 'Confirm you want to leave' dialog on page close
 user_pref('dom.vibrator.enabled', false); // Disable shaking the screen
-user_pref('javascript.options.asmjs', false); // Disable asmjs
+// user_pref('javascript.options.asmjs', false); // Disable asmjs
 // Disable Ion and baseline JIT to help harden JS against exploits (can cause performance loss)
 // user_pref('javascript.options.ion', false);
 // user_pref('javascript.options.baselinejit', false);
-user_pref('javascript.options.wasm', false); // Disable WebAssembly
-// user_pref("javascript.options.jit_trustedprincipals", true);
+// user_pref('javascript.options.wasm', false); // Disable WebAssembly
+// user_pref('javascript.options.jit_trustedprincipals', true);
 user_pref('dom.targetBlankNoOpener.enabled', true); // Enable (limited but sufficient) window.opener protection
     /*      == Telemetry >_< ==        */
 user_pref('toolkit.telemetry.unified', false);
@@ -404,7 +406,7 @@ user_pref('browser.contentblocking.report.fingerprinter.url', '');
 user_pref('app.shield.optoutstudies.enabled', false);
 user_pref('extensions.getAddons.showPane', false); // Disable about:addons' Recommendations pane (uses Google Analytics)
 user_pref('extensions.htmlaboutaddons.recommendations.enabled', false); // Disable recommendations in about:addons' Extensions and Themes panes
-user_pref("extensions.getAddons.cache.enabled", false); // Opt-out of add-on metadata updates
+user_pref('extensions.getAddons.cache.enabled', false); // Opt-out of add-on metadata updates
 user_pref('browser.discovery.enabled', false); // Disable personalized Extension Recommendations in about:addons and AMO
     /*      == Windows Preferences (Prevent websites from disabling new window features) ==         */
 user_pref('dom.disable_window_open_feature.close', true);
@@ -424,7 +426,7 @@ user_pref('dom.popup_allowed_events', 'click dblclick'); // Limit events that ca
     /*      == Geolocation ==       */
 user_pref('geo.enabled', false); // Location-Aware Browsing
 user_pref('permissions.default.geo', 2); // Location permissions: 0 = always ask (default), 1 = allow, 2 = block
-user_pref("permissions.delegation.enabled", false); // Disable permissions delegation
+user_pref('permissions.delegation.enabled', false); // Disable permissions delegation
 user_pref('browser.search.region', 'US'); // US region for search engine
 user_pref('browser.search.countryCode', 'US');
 user_pref('browser.search.geoip.url', '');
@@ -462,7 +464,7 @@ user_pref('browser.startup.blankWindow', false); // Disable showing about:blank 
     /*      == RFP Alternatives ==      */
 // user_pref('dom.maxHardwareConcurrency', 2); // Spoof (or limit?) number of CPU cores
 user_pref('dom.enable_resource_timing', false); // Disable resource/navigation timing
-user_pref("dom.enable_user_timing", false); // Make sure the User Timing API does not provide a new high resolution timestamp
+user_pref('dom.enable_user_timing', false); // Make sure the User Timing API does not provide a new high resolution timestamp
 user_pref('dom.enable_performance', false); // Disable timing attacks
 user_pref('device.sensors.enabled', false); // Disable device sensor API
 user_pref('device.sensors.motion.enabled', false);
@@ -509,12 +511,12 @@ user_pref('extensions.webextensions.restrictedDomains', 'accounts-static.cdn.moz
 user_pref('privacy.donottrackheader.enabled', true); // DONOTTRACKMEDAMN
 user_pref('browser.contentblocking.category', 'custom');
 // user_pref('privacy.trackingprotection.enabled', true);
-user_pref("privacy.trackingprotection.pbmode.enabled", true);
+user_pref('privacy.trackingprotection.pbmode.enabled', true);
 // user_pref('privacy.trackingprotection.cryptomining.enabled', true);
 // user_pref('privacy.trackingprotection.fingerprinting.enabled', true);
 // Extension blocklist
 user_pref('extensions.blocklist.enabled', true);
-user_pref("services.blocklist.update_enabled", true);
+user_pref('services.blocklist.update_enabled', true);
 user_pref('extensions.blocklist.url', 'https://blocklists.settings.services.mozilla.com/v1/blocklist/3/%APP_ID%/%APP_VERSION%/');
     /*      == Passwords ==     */
 // user_pref('signon.rememberSignons', false); // Disable saving passwords
@@ -557,12 +559,12 @@ user_pref('network.auth.subresource-http-auth-allow', 1); // HTTP authentication
 // user_pref('security.ssl3.dhe_rsa_aes_128_sha', false);
 // user_pref('security.ssl3.dhe_rsa_aes_256_sha', false);
 /* 1264: Disable the remaining non-modern cipher suites as of FF78 (in order of preferred by FF) */
-// user_pref("security.ssl3.ecdhe_ecdsa_aes_256_sha", false);
-// user_pref("security.ssl3.ecdhe_ecdsa_aes_128_sha", false);
-// user_pref("security.ssl3.ecdhe_rsa_aes_128_sha", false);
-// user_pref("security.ssl3.ecdhe_rsa_aes_256_sha", false);
-// user_pref("security.ssl3.rsa_aes_128_sha", false); // no PFS
-// user_pref("security.ssl3.rsa_aes_256_sha", false); // no PFS
+// user_pref('security.ssl3.ecdhe_ecdsa_aes_256_sha', false);
+// user_pref('security.ssl3.ecdhe_ecdsa_aes_128_sha', false);
+// user_pref('security.ssl3.ecdhe_rsa_aes_128_sha', false);
+// user_pref('security.ssl3.ecdhe_rsa_aes_256_sha', false);
+// user_pref('security.ssl3.rsa_aes_128_sha', false); // no PFS
+// user_pref('security.ssl3.rsa_aes_256_sha', false); // no PFS
 
 
 
@@ -570,17 +572,17 @@ user_pref('network.auth.subresource-http-auth-allow', 1); // HTTP authentication
  * [SET] the following preferences adjusts the smooth scrolling feature of
  * Firefox when using a mouse wheel or keyboard keys to scroll
  */
-user_pref("general.smoothScroll.lines.durationMaxMS", 400);         // smooth the start/end of line scrolling operations in ms (up/down arrow/page keys)
-user_pref("general.smoothScroll.lines.durationMinMS", 200);         // smooth the start/end of line scrolling operations in ms (up/down arrow/page keys)
-user_pref("general.smoothScroll.mouseWheel.durationMaxMS", 600);    // smooth the start/end of scrolling operations in ms
-user_pref("general.smoothScroll.mouseWheel.durationMinMS", 300);    // smooth the start/end of scrolling operations in ms
-user_pref("general.smoothScroll.other.durationMaxMS", 400);         // smooth the start/end of other scrolling operations in ms
-user_pref("general.smoothScroll.other.durationMinMS", 200);         // smooth the start/end of other scrolling operations in ms
-user_pref("general.smoothScroll.pages.durationMaxMS", 400);         // smooth the start/end of page scrolling operations in ms (PgUp/PgDn keys)
-user_pref("general.smoothScroll.pages.durationMinMS", 200);         // smooth the start/end of page scrolling operations in ms (PgUp/PgDn keys)
-user_pref("mousewheel.acceleration.factor", 10);                    // sets acceleration factor if mouse wheel.acceleration.start > -1
-user_pref("mousewheel.acceleration.start", 0);                      // when to apply mouse wheel.acceleration.factor (after how many scroll clicks of mouse wheel) - value must be greater than -1
-user_pref("mousewheel.default.delta_multiplier_x", 85);             // sets the x-axis step size
-user_pref("mousewheel.default.delta_multiplier_y", 85);             // sets the y-axis step size
-user_pref("mousewheel.default.delta_multiplier_z", 85);             // sets the z-axis step size
-user_pref("mousewheel.min_line_scroll_amount", 10);                 // if the CSS line height is smaller than this value in pixels, each scroll click will scroll this amount
+user_pref('general.smoothScroll.lines.durationMaxMS', 400);         // smooth the start/end of line scrolling operations in ms (up/down arrow/page keys)
+user_pref('general.smoothScroll.lines.durationMinMS', 200);         // smooth the start/end of line scrolling operations in ms (up/down arrow/page keys)
+user_pref('general.smoothScroll.mouseWheel.durationMaxMS', 600);    // smooth the start/end of scrolling operations in ms
+user_pref('general.smoothScroll.mouseWheel.durationMinMS', 300);    // smooth the start/end of scrolling operations in ms
+user_pref('general.smoothScroll.other.durationMaxMS', 400);         // smooth the start/end of other scrolling operations in ms
+user_pref('general.smoothScroll.other.durationMinMS', 200);         // smooth the start/end of other scrolling operations in ms
+user_pref('general.smoothScroll.pages.durationMaxMS', 400);         // smooth the start/end of page scrolling operations in ms (PgUp/PgDn keys)
+user_pref('general.smoothScroll.pages.durationMinMS', 200);         // smooth the start/end of page scrolling operations in ms (PgUp/PgDn keys)
+user_pref('mousewheel.acceleration.factor', 10);                    // sets acceleration factor if mouse wheel.acceleration.start > -1
+user_pref('mousewheel.acceleration.start', 0);                      // when to apply mouse wheel.acceleration.factor (after how many scroll clicks of mouse wheel) - value must be greater than -1
+user_pref('mousewheel.default.delta_multiplier_x', 85);             // sets the x-axis step size
+user_pref('mousewheel.default.delta_multiplier_y', 85);             // sets the y-axis step size
+user_pref('mousewheel.default.delta_multiplier_z', 85);             // sets the z-axis step size
+user_pref('mousewheel.min_line_scroll_amount', 10);                 // if the CSS line height is smaller than this value in pixels, each scroll click will scroll this amount
