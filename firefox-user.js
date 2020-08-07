@@ -33,7 +33,7 @@ user_pref('ui.key.menuAccessKey', 0); // Disable alt key toggling the menu bar
 user_pref('clipboard.autocopy', false); // Disable autocopy default [LINUX]
 user_pref('layout.spellcheckDefault', 2); // 0 = none, 1 = multi-line, 2 = multi-line & single-line
 user_pref('browser.privatebrowsing.forceMediaMemoryCache', true); // Disable media cache from writing to disk in Private Browsing
-user_pref('media.memory_cache_max_size', 16384);
+user_pref('media.memory_cache_max_size', 65536);
     /*      == Crash reports ==     */
 user_pref('dom.ipc.plugins.flash.subprocess.crashreporter.enabled', false); // Disable sending Flash crash reports
 user_pref('dom.ipc.plugins.reportCrashURL', false); // Disable sending the URL of the website where a plugin crashed
@@ -154,7 +154,6 @@ user_pref('browser.urlbar.suggest.topsites', false);
 // Disable live search suggestions
 // user_pref('browser.search.suggest.enabled', false);
 // user_pref('browser.urlbar.suggest.searches', false);
-user_pref('browser.urlbar.usepreloadedtopurls.enabled', false); // Disable location bar suggesting 'preloaded' top websites
 user_pref('browser.urlbar.speculativeConnect.enabled', false); // Disable location bar making speculative connections
 // Disable location bar suggestion types
 // user_pref('browser.urlbar.suggest.history', false);
@@ -234,6 +233,7 @@ user_pref('media.videocontrols.picture-in-picture.video-toggle.enabled', true);
 // Disable icon fonts (glyphs) and local fallback rendering
 // user_pref('gfx.downloadable_fonts.enabled', false);
 // user_pref('gfx.downloadable_fonts.fallback_delay', -1);
+user_pref('layout.css.font-visibility.level', 1); // Limit font visibility level
 user_pref('font.name-list.emoji', 'emoji'); // Change Firefox emoji set (default = 'Twemoji Mozilla', system set = 'emoji')
 user_pref('gfx.font_rendering.opentype_svg.enabled', false); // Disable rendering of SVG OpenType fonts
 user_pref('gfx.font_rendering.graphite.enabled', false); // Disable graphite
@@ -345,6 +345,7 @@ user_pref('privacy.userContext.ui.enabled', true); // Enable Container Tabs sett
 user_pref('privacy.usercontext.about_newtab_segregation.enabled', true); // Enable a private container for thumbnail loads
 user_pref('privacy.userContext.longPressBehavior', 2); // Set behavior on '+ Tab' button to display container menu: 0=no menu (default), 1=show when clicked, 2=show on long press
 user_pref('privacy.spoof_english', 2); // If Accept-Language should be spoofed by en-US: 0 - will prompt (default), 1 - don't spoof, 2 - spoof
+user_pref('privacy.partition.network_state', true); // Site partitioning
 // Referer
 user_pref('network.http.sendRefererHeader', 2); // Control when images/links send a referer: 0 = never, 1 = send only when links are clicked, 2 = for links and images (default)
 user_pref('network.http.referer.spoofSource', true); // Enable spoofing a referer
