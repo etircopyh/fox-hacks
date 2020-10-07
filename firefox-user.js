@@ -129,7 +129,7 @@ user_pref('browser.newtabpage.activity-stream.telemetry', false); // Disable Act
 user_pref('browser.newtabpage.activity-stream.feeds.telemetry', false);
 user_pref('browser.newtabpage.activity-stream.filterAdult', false);
 user_pref('browser.newtabpage.activity-stream.feeds.snippets', false); // Disable Snippets
-user_pref('browser.newtabpage.activity-stream.asrouter.providers.snippets', '');
+user_pref('browser.newtabpage.activity-stream.asrouter.providers.snippets', '{}');
 user_pref('browser.newtabpage.activity-stream.feeds.section.topstories', false); // Disable 'Recommended by Pocket'
 // user_pref('browser.newtabpage.activity-stream.feeds.topsites', false); // Disable Activity Stream Top Sites
 user_pref('browser.newtabpage.activity-stream.section.highlights.includePocket', false);
@@ -300,6 +300,7 @@ user_pref('security.ssl.require_safe_negotiation', true); // Disable old SSL/TLS
 // Control TLS versions (Firefox telemetry (April 2019) shows only 0.5% of TLS web traffic uses 1.0 or 1.1) 1=TLS 1.0, 2=TLS 1.1, 3=TLS 1.2, 4=TLS 1.3
 user_pref('security.tls.version.min', 3);
 user_pref('security.tls.version.max', 4);
+user_pref('security.ssl.enable_false_start', false); // No Google SSL False Start
 user_pref('security.tls.version.enable-deprecated', false); // Enforce TLS 1.0 and 1.1 downgrades as session only
 user_pref('security.ssl.disable_session_identifiers', true); // Disable SSL session tracking [FPI]
 user_pref('security.ssl.errorReporting.automatic', false);
@@ -427,6 +428,8 @@ user_pref('dom.popup_allowed_events', 'click dblclick'); // Limit events that ca
 user_pref('geo.enabled', false); // Location-Aware Browsing
 user_pref('permissions.default.geo', 2); // Location permissions: 0 = always ask (default), 1 = allow, 2 = block
 user_pref('permissions.delegation.enabled', false); // Disable permissions delegation
+user_pref('browser.region.network.url', '');
+user_pref('browser.region.update.enabled', false); // Disable region updates
 user_pref('browser.search.region', 'US'); // US region for search engine
 user_pref('browser.search.countryCode', 'US');
 user_pref('browser.search.geoip.url', '');
