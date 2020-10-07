@@ -367,7 +367,7 @@ user_pref('dom.serviceWorkers.enabled', false); // Disable service workers
 user_pref('dom.push.enabled', false); // Disable Push Notifications
 // user_pref('dom.push.userAgentID', ''); // To remove all notification subscriptions
 user_pref('permissions.default.desktop-notification', 2); // Disable desktop notifications
-user_pref('dom.event.contextmenu.enabled', false); // Disable website control over browser right-click context menu
+// user_pref('dom.event.contextmenu.enabled', false); // Disable website control over browser right-click context menu NOTE: May cause context menu doubling
 // user_pref('dom.event.clipboardevents.enabled', false); // Disable website access to clipboard events/content NOTE: Can break some websites functionality
 user_pref('middlemouse.paste', false); // Disable middlemouse paste leaking clipboard content on Linux after autoscroll
 user_pref('dom.allow_cut_copy', false); // Disable clipboard commands (cut/copy) from 'non-privileged' content
