@@ -117,7 +117,7 @@ user_pref('media.mediasource.experimental.enabled', true);
 user_pref('browser.download.saveLinkAsFilenameTimeout', 1000); // 'Save Link as ...' option timeout
 user_pref('browser.download.useDownloadDir', false); // Enforce user interaction for security by always asking where to download
 user_pref('browser.download.manager.addToRecentDocs', false); // Disable adding downloads to the system's 'recent documents' list
-user_pref('browser.download.hide_plugins_without_extensions', false); // Disable hiding mime types not associated with a plugin
+user_pref('browser.download.hide_plugins_without_extensions', true); // Disable hiding mime types not associated with a plugin
 // user_pref('browser.download.forbid_open_with', true); // Disable 'open with' in download dialog
     /*      == New Tab Page ==      */
 user_pref('browser.startup.homepage', 'about:blank'); // Set HOME+NEWWINDOW page: about:home=Activity Stream (default), custom URL, about:blank
@@ -285,7 +285,7 @@ user_pref('network.tcp.tcp_fastopen_enable', true); // Speed up the opening of s
 user_pref('network.trr.resolvers', '[{ "name": "Cloudflare (non-Mozilla)", "url": "https://cloudflare-dns.com/dns-query" },{ "name": "Cloudflare", "url": "https://mozilla.cloudflare-dns.com/dns-query" },{ "name": "Google", "url": "https://dns.google/dns-query" },{ "name": "Cisco/OpenDNS", "url": "https://doh.opendns.com/dns-query" },{ "name": "Adguard", "url": "https://dns.adguard.com/dns-query" },{ "name": "Adguard Family Protection", "url": "https://dns-family.adguard.com/dns-query" },{ "name": "DNSWarden Adblock", "url": "https://doh.dnswarden.com/adblock" },{ "name": "DNSWarden Uncensored", "url": "https://doh.dnswarden.com/uncensored" },{ "name": "SecureDNS", "url": "https://doh.securedns.eu/dns-query" },{ "name": "AppliedPrivacy", "url": "https://doh.appliedprivacy.net/query" },{ "name": "Digitale Gesellschaft (CH)", "url": "https://dns.digitale-gesellschaft.ch/dns-query" }, { "name": "Quad9", "url": "https://dns.quad9.net/dns-query" }]'); // DoH Resolvers
 user_pref('network.security.esni.enabled', true); // Enable ESNI
 user_pref('network.ftp.enabled', false); // Disable FTP
-user_pref('network.file.disable_unc_paths', false); // Disable using UNC (Uniform Naming Convention) paths NOTE: Can cause extension storage to fail
+// user_pref('network.file.disable_unc_paths', false); // Disable using UNC (Uniform Naming Convention) paths NOTE: Can cause extension storage to fail
 user_pref('network.gio.supported-protocols', ''); // Disable GIO as a potential proxy bypass vector
 // Disable resource preloading / prefetch
 user_pref('network.dns.disablePrefetch', true);
