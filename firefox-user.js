@@ -311,6 +311,9 @@ user_pref('security.ssl.enable_ocsp_stapling', true); // Enable OCSP Stapling
 user_pref('security.OCSP.enabled', 1);
 user_pref('security.OCSP.require', true); // OCSP fetch: false = soft-fail, true = hard-fail
 // CERTS / HPKP (HTTP Public Key Pinning)
+// Enforce CRLite
+user_pref("security.remote_settings.crlite_filters.enabled", true);
+user_pref("security.pki.crlite_mode", 2);
 user_pref('security.pki.sha1_enforcement_level', 1); // Disable or limit SHA-1 certificates
 user_pref('security.family_safety.mode', 0); // Disable Windows 8.1's Microsoft Family Safety cert [WINDOWS]
 // user_pref('security.nocertdb', true); // Disable intermediate certificate caching (fingerprinting attack vector)
@@ -322,7 +325,7 @@ user_pref('security.cert_pinning.enforcement_level', 2); // PKP (Public Key Pinn
     /*      == Privacy ==       */
 // user_pref('dom.security.https_only_mode', true); // Enable HTTPS only mode
 // user_pref('dom.security.https_only_mode.upgrade_local', true);
-// user_pref('layout.css.visited_links_enabled', false); // Disable coloring of visited links - CSS history leak
+// user_pref("dom.security.https_only_mode_send_http_background_request", false); // Disable HTTP background requests
 user_pref('browser.send_pings', false); // Disable 'Hyperlink auditing'
 user_pref('browser.send_pings.require_same_host', true);
 user_pref('media.eme.enabled', false); // DRM-controlled content playback
@@ -333,8 +336,10 @@ user_pref('urlclassifier.trackingTable', '');
 // user_pref('urlclassifier.trackingTable', 'moztest-track-simple,base-track-digest256,content-track-digest256');
 // user_pref('network.cookie.lifetimePolicy', 2); // Delete cookies on browser close
 // user_pref('dom.storage.enabled', false); // Disable DOM Storage
+user_pref("dom.storage.next_gen", true); // Enable Local Storage Next Generation (LSNG)
 user_pref('dom.indexedDB.enabled', true); // Enforce IndexedDB (IDB) as enabled
-user_pref('browser.cache.offline.enable', false); // Disable offline cache
+// user_pref('browser.cache.offline.enable', false); // Disable offline cache
+user_pref("browser.cache.offline.storage.enable", false); // Enforce no offline cache storage (appCache)
 user_pref('offline-apps.allow_by_default', false); // Enforce websites to ask to store data for offline use
 user_pref('dom.caches.enabled', false); // Disable service worker cache and cache storage
 user_pref("dom.targetBlankNoOpener.enabled", true); // Makes rel=noopener implicit
@@ -346,6 +351,7 @@ user_pref('privacy.userContext.enabled', true); // Enable Container Tabs
 user_pref('privacy.userContext.ui.enabled', true); // Enable Container Tabs setting in preferences
 user_pref('privacy.usercontext.about_newtab_segregation.enabled', true); // Enable a private container for thumbnail loads
 user_pref('privacy.userContext.longPressBehavior', 2); // Set behavior on '+ Tab' button to display container menu: 0=no menu (default), 1=show when clicked, 2=show on long press
+user_pref("privacy.window.name.update.enabled", true); // Enable "window.name" protection
 user_pref('privacy.spoof_english', 2); // If Accept-Language should be spoofed by en-US: 0 - will prompt (default), 1 - don't spoof, 2 - spoof
 user_pref('privacy.partition.network_state', true); // Site partitioning
 // Referer
@@ -377,7 +383,7 @@ user_pref('dom.vibrator.enabled', false); // Disable shaking the screen
 // Disable Ion and baseline JIT to help harden JS against exploits (can cause performance loss)
 // user_pref('javascript.options.ion', false);
 // user_pref('javascript.options.baselinejit', false);
-// user_pref('javascript.options.wasm', false); // Disable WebAssembly
+user_pref('javascript.options.wasm', false); // Disable WebAssembly
 // user_pref('javascript.options.jit_trustedprincipals', true);
 user_pref('dom.targetBlankNoOpener.enabled', true); // Enable (limited but sufficient) window.opener protection
     /*      == Telemetry >_< ==        */
@@ -411,7 +417,7 @@ user_pref('extensions.getAddons.cache.enabled', false); // Opt-out of add-on met
 user_pref('browser.discovery.enabled', false); // Disable personalized Extension Recommendations in about:addons and AMO
     /*      == Windows Preferences (Prevent websites from disabling new window features) ==         */
 user_pref('dom.disable_window_move_resize', true); // Prevent scripts from moving and resizing open windows
-user_pref('browser.link.open_newwindow', 3); // Open links targeting new windows in a new tab instead 2 = new window, 3 = new tab
+user_pref('browser.link.open_newwindow', 3); // Open links targeting new windows in a new tab instead 1 = most recent window or tab, 2 = new window, 3 = new tab
 user_pref('browser.link.open_newwindow.restriction', 0);
 user_pref('dom.disable_open_during_load', true); // Block popup windows
 user_pref('dom.popup_allowed_events', 'click dblclick'); // Limit events that can cause a popup
@@ -425,8 +431,6 @@ user_pref('browser.search.region', 'US'); // US region for search engine
 user_pref('browser.search.countryCode', 'US');
 user_pref('browser.search.geoip.url', '');
 user_pref('geo.wifi.uri', '');
-user_pref('browser.search.geoSpecificDefaults', false); // Disable geographically specific results/search engines
-user_pref('browser.search.geoSpecificDefaults.url', '');
 // Disable using the OS's geolocation service
 user_pref('geo.provider.ms-windows-location', false); // [WINDOWS]
 user_pref('geo.provider.use_corelocation', false); // [MAC]
