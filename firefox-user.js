@@ -410,17 +410,8 @@ user_pref('extensions.htmlaboutaddons.recommendations.enabled', false); // Disab
 user_pref('extensions.getAddons.cache.enabled', false); // Opt-out of add-on metadata updates
 user_pref('browser.discovery.enabled', false); // Disable personalized Extension Recommendations in about:addons and AMO
     /*      == Windows Preferences (Prevent websites from disabling new window features) ==         */
-user_pref('dom.disable_window_open_feature.close', true);
-user_pref('dom.disable_window_open_feature.location', true);
-user_pref('dom.disable_window_open_feature.menubar', true);
-user_pref('dom.disable_window_open_feature.minimizable', true);
-user_pref('dom.disable_window_open_feature.personalbar', true); // Bookmarks toolbar
-user_pref('dom.disable_window_open_feature.resizable', true);
-user_pref('dom.disable_window_open_feature.status', true);
-user_pref('dom.disable_window_open_feature.titlebar', true);
-user_pref('dom.disable_window_open_feature.toolbar', true);
 user_pref('dom.disable_window_move_resize', true); // Prevent scripts from moving and resizing open windows
-user_pref('browser.link.open_newwindow', 3); // Open links targeting new windows in a new tab instead
+user_pref('browser.link.open_newwindow', 3); // Open links targeting new windows in a new tab instead 2 = new window, 3 = new tab
 user_pref('browser.link.open_newwindow.restriction', 0);
 user_pref('dom.disable_open_during_load', true); // Block popup windows
 user_pref('dom.popup_allowed_events', 'click dblclick'); // Limit events that can cause a popup
