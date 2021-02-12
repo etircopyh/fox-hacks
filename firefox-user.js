@@ -76,6 +76,7 @@ user_pref('extensions.screenshots.upload-disabled', true); // Disable uploading 
 // user_pref('extensions.formautofill.addresses.enabled', false); // Disable Form Autofill
 // user_pref('extensions.formautofill.available', 'off');
 // user_pref('extensions.formautofill.creditCards.enabled', false);
+// user_pref('extensions.formautofill.creditCards.available', false);
 // user_pref('extensions.formautofill.heuristics.enabled', false);
 user_pref('extensions.webcompat-reporter.enabled', false); // Disable Web Compatibility Reporter
 user_pref('extensions.webcompat.perform_injections', false);
@@ -117,7 +118,7 @@ user_pref('media.mediasource.experimental.enabled', true);
 user_pref('browser.download.saveLinkAsFilenameTimeout', 1000); // 'Save Link as ...' option timeout
 user_pref('browser.download.useDownloadDir', false); // Enforce user interaction for security by always asking where to download
 user_pref('browser.download.manager.addToRecentDocs', false); // Disable adding downloads to the system's 'recent documents' list
-user_pref('browser.download.hide_plugins_without_extensions', true); // Disable hiding mime types not associated with a plugin
+user_pref('browser.download.hide_plugins_without_extensions', true); // Hiding mime types not associated with a plugin
 // user_pref('browser.download.forbid_open_with', true); // Disable 'open with' in download dialog
     /*      == New Tab Page ==      */
 user_pref('browser.startup.homepage', 'about:blank'); // Set HOME+NEWWINDOW page: about:home=Activity Stream (default), custom URL, about:blank
@@ -129,7 +130,6 @@ user_pref('browser.newtabpage.activity-stream.telemetry', false); // Disable Act
 user_pref('browser.newtabpage.activity-stream.feeds.telemetry', false);
 user_pref('browser.newtabpage.activity-stream.filterAdult', false);
 user_pref('browser.newtabpage.activity-stream.feeds.snippets', false); // Disable Snippets
-user_pref('browser.newtabpage.activity-stream.asrouter.providers.snippets', '{}');
 user_pref('browser.newtabpage.activity-stream.feeds.section.topstories', false); // Disable 'Recommended by Pocket'
 // user_pref('browser.newtabpage.activity-stream.feeds.topsites', false); // Disable Activity Stream Top Sites
 user_pref('browser.newtabpage.activity-stream.section.highlights.includePocket', false);
@@ -153,13 +153,13 @@ user_pref('browser.urlbar.openViewOnFocus', false);
 user_pref('browser.urlbar.suggest.topsites', false);
 // Disable live search suggestions
 // user_pref('browser.search.suggest.enabled', false);
-// user_pref('browser.urlbar.suggest.searches', false);
 user_pref('browser.urlbar.speculativeConnect.enabled', false); // Disable location bar making speculative connections
 // Disable location bar suggestion types
 // user_pref('browser.urlbar.suggest.history', false);
 // user_pref('browser.urlbar.suggest.bookmark', false);
 // user_pref('browser.urlbar.suggest.openpage', false);
 // user_pref('browser.urlbar.suggest.searches', false);
+// user_pref('browser.urlbar.suggest.engines', false);
     /*      == Other ==     */
 // Misc
 user_pref('accessibility.force_disabled', 1); // Prevent accessibility services from accessing your browser
@@ -168,7 +168,6 @@ user_pref('browser.sessionstore.interval', 30000); // Minimum interval between s
 user_pref('beacon.enabled', false); // Disable sending additional analytics to web servers
 user_pref('browser.helperApps.deleteTempFileOnExit', true); // Remove temp files opened with an external application
 user_pref('browser.pagethumbnails.capturing_disabled', true); // Disable page thumbnail collection
-user_pref('browser.tabs.remote.allowLinkedWebInFileUriProcess', false); // Block web content in file processes
 user_pref('browser.uitour.enabled', false); // Disable UITour backend so there is no chance that a remote page can use it
 user_pref('browser.uitour.url', '');
 user_pref('dom.webnotifications.enabled', false);
@@ -312,8 +311,8 @@ user_pref('security.OCSP.enabled', 1);
 user_pref('security.OCSP.require', true); // OCSP fetch: false = soft-fail, true = hard-fail
 // CERTS / HPKP (HTTP Public Key Pinning)
 // Enforce CRLite
-user_pref("security.remote_settings.crlite_filters.enabled", true);
-user_pref("security.pki.crlite_mode", 2);
+user_pref('security.remote_settings.crlite_filters.enabled', true);
+user_pref('security.pki.crlite_mode', 2);
 user_pref('security.pki.sha1_enforcement_level', 1); // Disable or limit SHA-1 certificates
 user_pref('security.family_safety.mode', 0); // Disable Windows 8.1's Microsoft Family Safety cert [WINDOWS]
 // user_pref('security.nocertdb', true); // Disable intermediate certificate caching (fingerprinting attack vector)
@@ -323,9 +322,10 @@ user_pref('security.cert_pinning.enforcement_level', 2); // PKP (Public Key Pinn
 // user_pref('network.captive-portal-service.enabled', false);
 // user_pref('network.connectivity-service.enabled', false); // Disable Network Connectivity checks
     /*      == Privacy ==       */
-// user_pref('dom.security.https_only_mode', true); // Enable HTTPS only mode
-// user_pref('dom.security.https_only_mode.upgrade_local', true);
-// user_pref("dom.security.https_only_mode_send_http_background_request", false); // Disable HTTP background requests
+user_pref('dom.security.https_only_mode', true); // Enable HTTPS only mode
+// user_pref('dom.security.https_only_mode_pbm', true);
+// user_pref('dom.security.https_only_mode.upgrade_local', true); // Enable HTTPS-Only mode for local resources
+user_pref('dom.security.https_only_mode_send_http_background_request', false); // Disable HTTP background requests
 user_pref('browser.send_pings', false); // Disable 'Hyperlink auditing'
 user_pref('browser.send_pings.require_same_host', true);
 user_pref('media.eme.enabled', false); // DRM-controlled content playback
@@ -336,13 +336,13 @@ user_pref('urlclassifier.trackingTable', '');
 // user_pref('urlclassifier.trackingTable', 'moztest-track-simple,base-track-digest256,content-track-digest256');
 // user_pref('network.cookie.lifetimePolicy', 2); // Delete cookies on browser close
 // user_pref('dom.storage.enabled', false); // Disable DOM Storage
-user_pref("dom.storage.next_gen", true); // Enable Local Storage Next Generation (LSNG)
+user_pref('dom.storage.next_gen', true); // Enable Local Storage Next Generation
 user_pref('dom.indexedDB.enabled', true); // Enforce IndexedDB (IDB) as enabled
 // user_pref('browser.cache.offline.enable', false); // Disable offline cache
-user_pref("browser.cache.offline.storage.enable", false); // Enforce no offline cache storage (appCache)
+user_pref('browser.cache.offline.storage.enable', false); // Enforce no offline cache storage (appCache)
 user_pref('offline-apps.allow_by_default', false); // Enforce websites to ask to store data for offline use
 user_pref('dom.caches.enabled', false); // Disable service worker cache and cache storage
-user_pref("dom.targetBlankNoOpener.enabled", true); // Makes rel=noopener implicit
+user_pref('dom.targetBlankNoOpener.enabled', true); // Makes rel=noopener implicit
 // user_pref('dom.storageManager.enabled', false); // Disable Storage API
 // user_pref('dom.storage_access.enabled', false); // Disable Storage Access API
 user_pref('browser.sessionstore.privacy_level', 0); // Store extra session data: 0 = for any site 1 = for unencrypted (non-HTTPS) sites only 2 = Never
@@ -351,7 +351,7 @@ user_pref('privacy.userContext.enabled', true); // Enable Container Tabs
 user_pref('privacy.userContext.ui.enabled', true); // Enable Container Tabs setting in preferences
 user_pref('privacy.usercontext.about_newtab_segregation.enabled', true); // Enable a private container for thumbnail loads
 user_pref('privacy.userContext.longPressBehavior', 2); // Set behavior on '+ Tab' button to display container menu: 0=no menu (default), 1=show when clicked, 2=show on long press
-user_pref("privacy.window.name.update.enabled", true); // Enable "window.name" protection
+user_pref('privacy.window.name.update.enabled', true); // Enable 'window.name' protection
 user_pref('privacy.spoof_english', 2); // If Accept-Language should be spoofed by en-US: 0 - will prompt (default), 1 - don't spoof, 2 - spoof
 user_pref('privacy.partition.network_state', true); // Site partitioning
 // Referer
@@ -505,6 +505,7 @@ user_pref('security.mixed_content.block_object_subrequest', true); // Block unen
 // user_pref('extensions.autoDisableScopes', 15);
 // user_pref('extensions.webextensions.restrictedDomains', ''); // Disable webextension restrictions on certain mozilla domains (forbid to download extensions)
 user_pref('extensions.webextensions.restrictedDomains', 'accounts-static.cdn.mozilla.net,accounts.firefox.com,addons.cdn.mozilla.net,api.accounts.firefox.com,content.cdn.mozilla.net,discovery.addons.mozilla.org,install.mozilla.org,oauth.accounts.firefox.com,profile.accounts.firefox.com,support.mozilla.org,sync.services.mozilla.com'); // Removed AMO from restricted domains
+user_pref('extensions.postDownloadThirdPartyPrompt', false); // Disable bypassing 3rd party extension install prompts
     /*      == Browser Content Blocking ==      */
 user_pref('privacy.donottrackheader.enabled', true); // DONOTTRACKMEDAMN
 user_pref('browser.contentblocking.category', 'custom');
