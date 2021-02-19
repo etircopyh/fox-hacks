@@ -28,6 +28,7 @@ user_pref('browser.urlbar.decodeURLsOnCopy', true); // See bugzilla 1320061
 user_pref('browser.urlbar.dnsResolveSingleWordsAfterSearch', 0); // Disable location bar leaking single words to a DNS provider
 user_pref('general.autoScroll', true); // Middle-click enabling auto-scrolling
 user_pref('ui.key.menuAccessKey', 0); // Disable alt key toggling the menu bar
+user_pref('ui.context_menus_after_mouseup', true); // Disable stupid GTK context menu behavior
 // user_pref('view_source.tab', false); // View 'page/selection source' in a new window
 // user_pref('accessibility.typeaheadfind', true); // Enable 'Find As You Type'
 user_pref('clipboard.autocopy', false); // Disable autocopy default [LINUX]
@@ -63,7 +64,6 @@ user_pref('plugin.state.flash', 0); // Disable Flash Player NPAPI plugin
 user_pref('plugin.state.java', 0); // Disable Java NPAPI plugin
 // user_pref('media.gmp-provider.enabled', false); // Disable GMP (Gecko Media Plugins)
 // user_pref('media.gmp-widevinecdm.enabled', false); // Disable widevine CDM
-// user_pref('media.gmp-widevinecdm.visible', false);
 // System Add-ons
 user_pref('app.normandy.first_run', false);
 user_pref('app.normandy.enabled', false); // Disable Normandy/Shield
@@ -118,7 +118,6 @@ user_pref('media.mediasource.experimental.enabled', true);
 user_pref('browser.download.saveLinkAsFilenameTimeout', 1000); // 'Save Link as ...' option timeout
 user_pref('browser.download.useDownloadDir', false); // Enforce user interaction for security by always asking where to download
 user_pref('browser.download.manager.addToRecentDocs', false); // Disable adding downloads to the system's 'recent documents' list
-user_pref('browser.download.hide_plugins_without_extensions', true); // Hiding mime types not associated with a plugin
 // user_pref('browser.download.forbid_open_with', true); // Disable 'open with' in download dialog
     /*      == New Tab Page ==      */
 user_pref('browser.startup.homepage', 'about:blank'); // Set HOME+NEWWINDOW page: about:home=Activity Stream (default), custom URL, about:blank
@@ -181,7 +180,6 @@ user_pref('devtools.debugger.force-local', true);
 user_pref('mathml.disabled', true); // Disable MathML
 // user_pref('svg.disabled', true); // Disable in-content SVG
 user_pref('middlemouse.contentLoadURL', false); // Disable middle mouse click opening links from clipboard
-user_pref('network.http.redirection-limit', 10); // Limit HTTP redirects (default: 20)
 user_pref('permissions.default.shortcuts', 2); // Disable websites overriding Firefox's keyboard shortcuts
 user_pref('permissions.manager.defaultsUrl', ''); // Remove special permissions for certain mozilla domains
 user_pref('webchannel.allowObject.urlWhitelist', ''); // Remove webchannel whitelist
@@ -302,9 +300,6 @@ user_pref('security.tls.version.max', 4);
 user_pref('security.ssl.enable_false_start', false); // No Google SSL False Start
 user_pref('security.tls.version.enable-deprecated', false); // Enforce TLS 1.0 and 1.1 downgrades as session only
 user_pref('security.ssl.disable_session_identifiers', true); // Disable SSL session tracking [FPI]
-user_pref('security.ssl.errorReporting.automatic', false);
-user_pref('security.ssl.errorReporting.enabled', false);
-user_pref('security.ssl.errorReporting.url', '');
 user_pref('security.tls.enable_0rtt_data', false); // Disable TLS1.3 0-RTT
 user_pref('security.ssl.enable_ocsp_stapling', true); // Enable OCSP Stapling
 user_pref('security.OCSP.enabled', 1);
@@ -353,12 +348,11 @@ user_pref('privacy.usercontext.about_newtab_segregation.enabled', true); // Enab
 user_pref('privacy.userContext.longPressBehavior', 2); // Set behavior on '+ Tab' button to display container menu: 0=no menu (default), 1=show when clicked, 2=show on long press
 user_pref('privacy.window.name.update.enabled', true); // Enable 'window.name' protection
 user_pref('privacy.spoof_english', 2); // If Accept-Language should be spoofed by en-US: 0 - will prompt (default), 1 - don't spoof, 2 - spoof
-user_pref('privacy.partition.network_state', true); // Site partitioning
 // Referer
 user_pref('network.http.sendRefererHeader', 2); // Control when images/links send a referer: 0 = never, 1 = send only when links are clicked, 2 = for links and images (default)
 user_pref('network.http.referer.spoofSource', true); // Enable spoofing a referer
-user_pref('network.http.referer.XOriginPolicy', 0); // Send Referer: 0 = in all cases 1 = to same eTLD sites 2 = only when the full hostnames match
-user_pref('network.http.referer.XOriginTrimmingPolicy', 1); // Info to be sent to header: 0 = full url 1 = URL without query string 2 = scheme, host, and port
+user_pref('network.http.referer.XOriginPolicy', 2); // Send Referer: 0 = in all cases 1 = to same eTLD sites 2 = only when the full hostnames match
+user_pref('network.http.referer.XOriginTrimmingPolicy', 2); // Info to be sent to header: 0 = full url 1 = URL without query string 2 = scheme, host, and port
 // user_pref('network.http.referer.defaultPolicy', 3);
 // user_pref('network.http.referer.defaultPolicy.pbmode', 2);
 // Security
@@ -368,6 +362,7 @@ user_pref('security.dialog_enable_delay', 700); // Enforce a security delay on s
 user_pref('privacy.firstparty.isolate', true); // Enable First Party Isolation
 user_pref('privacy.firstparty.isolate.restrict_opener_access', true); // Enforce FPI restriction for window.opener
 // user_pref('privacy.firstparty.isolate.block_post_message', true);
+// user_pref('privacy.firstparty.isolate.use_site', true); // Enable scheme with FPI
 // Service Workers
 user_pref('dom.serviceWorkers.enabled', false); // Disable service workers
 user_pref('dom.push.enabled', false); // Disable Push Notifications
@@ -420,7 +415,7 @@ user_pref('dom.disable_window_move_resize', true); // Prevent scripts from movin
 user_pref('browser.link.open_newwindow', 3); // Open links targeting new windows in a new tab instead 1 = most recent window or tab, 2 = new window, 3 = new tab
 user_pref('browser.link.open_newwindow.restriction', 0);
 user_pref('dom.disable_open_during_load', true); // Block popup windows
-user_pref('dom.popup_allowed_events', 'click dblclick'); // Limit events that can cause a popup
+user_pref('dom.popup_allowed_events', 'click dblclick mousedown pointerdown'); // Limit events that can cause a popup
     /*      == Geolocation ==       */
 user_pref('geo.enabled', false); // Location-Aware Browsing
 user_pref('permissions.default.geo', 2); // Location permissions: 0 = always ask (default), 1 = allow, 2 = block
@@ -430,7 +425,6 @@ user_pref('browser.region.update.enabled', false); // Disable region updates
 user_pref('browser.search.region', 'US'); // US region for search engine
 user_pref('browser.search.countryCode', 'US');
 user_pref('browser.search.geoip.url', '');
-user_pref('geo.wifi.uri', '');
 // Disable using the OS's geolocation service
 user_pref('geo.provider.ms-windows-location', false); // [WINDOWS]
 user_pref('geo.provider.use_corelocation', false); // [MAC]
