@@ -4,6 +4,7 @@
     /*      == Browser ==       */
 user_pref('app.update.auto', false);
 user_pref('app.update.url', '');
+user_pref("browser.quitShortcut.disabled", true); // Disable Ctrl-Q quit shortcut
 user_pref('browser.uidensity', 1); // User Interface density
 user_pref('layout.css.devPixelsPerPx', 1); // Global pages zoom level
 user_pref('browser.shell.shortcutFavicons', false);
@@ -57,13 +58,10 @@ user_pref('ui.prefersReducedMotion', 1);
 user_pref('devtools.theme', 'dark'); // DevTools Dark Mode
 // Dark input fields fix (for Plasma DE)
 user_pref('widget.chrome.allow-gtk-dark-theme', true);
-user_pref('widget.content.allow-gtk-dark-theme', true);
-user_pref('widget.content.gtk-theme-override', 'Breeze:light');
     /*      == Add-ons ==       */
 user_pref('plugin.state.flash', 0); // Disable Flash Player NPAPI plugin
 user_pref('plugin.state.java', 0); // Disable Java NPAPI plugin
 // user_pref('media.gmp-provider.enabled', false); // Disable GMP (Gecko Media Plugins)
-// user_pref('media.gmp-widevinecdm.enabled', false); // Disable widevine CDM
 // System Add-ons
 user_pref('app.normandy.first_run', false);
 user_pref('app.normandy.enabled', false); // Disable Normandy/Shield
@@ -86,12 +84,15 @@ user_pref('browser.ping-centre.telemetry', false);
 user_pref('media.getusermedia.screensharing.enabled', false); // Disable screensharing
 user_pref('media.getusermedia.browser.enabled', false);
 user_pref('media.getusermedia.audiocapture.enabled', false);
+// Disable WebRTC audio post processing
 user_pref('media.getusermedia.agc_enabled', false);
 user_pref('media.getusermedia.aec_enabled', false);
 user_pref('media.getusermedia.noise_enabled', false);
+user_pref('media.getusermedia.hpf_enabled', false);
 user_pref('permissions.default.camera', 2); // Block camera access
 user_pref('permissions.default.microphone', 2); // Block microphone access
 user_pref('permissions.default.xr', 2); // Block virtual reality devices
+user_pref('media.default_volume', 0.6); // Set default HTML5 media volume
 user_pref('media.autoplay.default', 5); // Disable Autoplay
 user_pref('media.autoplay.block-event.enabled', true);
 user_pref('media.autoplay.block-webaudio', true);
@@ -113,6 +114,7 @@ user_pref('media.mediasource.mp4.enabled', true);
 //user_pref('media.webm.enabled', false);
 user_pref('media.mediasource.ignore_codecs', true); // Enable H.264 MSE, amongst other things
 user_pref('media.mediasource.experimental.enabled', true);
+user_pref('media.rdd-vpx.enabled', false); // Work around sandboxing bug (https://bugzilla.mozilla.org/show_bug.cgi?id=1673184)
     /*      == Downloads ==     */
 // user_pref('browser.download.folderList', 2); // Downloads directory
 user_pref('browser.download.saveLinkAsFilenameTimeout', 1000); // 'Save Link as ...' option timeout
@@ -133,6 +135,7 @@ user_pref('browser.newtabpage.activity-stream.feeds.section.topstories', false);
 // user_pref('browser.newtabpage.activity-stream.feeds.topsites', false); // Disable Activity Stream Top Sites
 user_pref('browser.newtabpage.activity-stream.section.highlights.includePocket', false);
 user_pref('browser.newtabpage.activity-stream.showSponsored', false); // Disable sponsored content
+user_pref('browser.newtabpage.activity-stream.showSponsoredTopSites', false);
 user_pref('browser.newtabpage.activity-stream.feeds.discoverystreamfeed', false);
 user_pref('browser.newtabpage.activity-stream.default.sites', ''); // Clear default topsites (with possibility to add your own)
 user_pref('browser.library.activity-stream.enabled', false); // Disable recent Highlights in the Library
@@ -245,7 +248,7 @@ user_pref('gfx.canvas.azure.accelerated', true);
 user_pref('webgl.disabled', true);
 user_pref('webgl.enable-webgl2', false);
 user_pref('webgl.dxgl.enabled', false); // [WINDOWS]
-user_pref('webgl.min_capability_mode', true);
+// user_pref('webgl.min_capability_mode', true);
 user_pref('webgl.disable-extensions', true);
 user_pref('webgl.disable-fail-if-major-performance-caveat', true);
 user_pref('webgl.msaa-samples', 0);
@@ -257,7 +260,7 @@ user_pref('browser.tabs.unloadOnLowMemory', true); // Tabs discarding
 user_pref('security.sandbox.content.level', 2); // Sandbox content level
 // Wayland VA-API
 user_pref('widget.wayland-dmabuf-vaapi.enabled', true);
-// user_pref('media.ffvpx.enabled', false); // Disable bundled FFmpeg
+user_pref('media.ffvpx.enabled', false); // Disable bundled FFmpeg
     /*      == Cache ==        */
 user_pref('browser.cache.disk.enable', true); // Enable disk cache
 user_pref('browser.cache.disk_cache_ssl', false);
@@ -299,7 +302,7 @@ user_pref('security.tls.version.min', 3);
 user_pref('security.tls.version.max', 4);
 user_pref('security.ssl.enable_false_start', false); // No Google SSL False Start
 user_pref('security.tls.version.enable-deprecated', false); // Enforce TLS 1.0 and 1.1 downgrades as session only
-user_pref('security.ssl.disable_session_identifiers', true); // Disable SSL session tracking [FPI]
+// user_pref('security.ssl.disable_session_identifiers', true); // Disable SSL session tracking [FPI]
 user_pref('security.tls.enable_0rtt_data', false); // Disable TLS1.3 0-RTT
 user_pref('security.ssl.enable_ocsp_stapling', true); // Enable OCSP Stapling
 user_pref('security.OCSP.enabled', 1);
