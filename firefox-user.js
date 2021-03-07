@@ -92,7 +92,7 @@ user_pref('media.getusermedia.hpf_enabled', false);
 user_pref('permissions.default.camera', 2); // Block camera access
 user_pref('permissions.default.microphone', 2); // Block microphone access
 user_pref('permissions.default.xr', 2); // Block virtual reality devices
-user_pref('media.default_volume', 0.6); // Set default HTML5 media volume
+user_pref('media.default_volume', '0.6'); // Set default HTML5 media volume
 user_pref('media.autoplay.default', 5); // Disable Autoplay
 user_pref('media.autoplay.block-event.enabled', true);
 user_pref('media.autoplay.block-webaudio', true);
