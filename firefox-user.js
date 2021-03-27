@@ -278,7 +278,6 @@ user_pref('network.http.altsvc.enabled', false); // Disable HTTP Alternative Ser
 user_pref('network.http.altsvc.oe', false);
 user_pref('network.proxy.type', 0); // Disable looking for system proxy
 user_pref('network.proxy.socks_remote_dns', true); // Enforce the proxy server to do any DNS lookups when using SOCKS
-user_pref('network.tcp.tcp_fastopen_enable', true); // Speed up the opening of successive TCP connections between two endpoints
 // user_pref('network.trr.mode', 2); // Enable DNS over HTTPS
 // user_pref('network.trr.bootstrapAddress', '1.1.1.1');
 // user_pref('network.trr.uri', 'https://cloudflare-dns.com/dns-query'); // DoH Server | https://github.com/curl/curl/wiki/DNS-over-HTTPS
