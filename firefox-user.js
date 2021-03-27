@@ -138,7 +138,6 @@ user_pref('browser.newtabpage.activity-stream.showSponsored', false); // Disable
 user_pref('browser.newtabpage.activity-stream.showSponsoredTopSites', false);
 user_pref('browser.newtabpage.activity-stream.feeds.discoverystreamfeed', false);
 user_pref('browser.newtabpage.activity-stream.default.sites', ''); // Clear default topsites (with possibility to add your own)
-user_pref('browser.library.activity-stream.enabled', false); // Disable recent Highlights in the Library
 user_pref('browser.aboutHomeSnippets.updateUrl', '');
     /*      == URL bar ==       */
 // user_pref('keyword.enabled', false); // Disable location bar using search
@@ -244,6 +243,7 @@ user_pref('gfx.font_rendering.graphite.enabled', false); // Disable graphite
 // user_pref('gfx.webrender.all', true); // Enable WebRender
 // user_pref('layout.frame_rate', 60); // Pages FPS
 user_pref('gfx.canvas.azure.accelerated', true);
+user_pref('layers.acceleration.force-enabled', true);
 // WebGL
 user_pref('webgl.disabled', true);
 user_pref('webgl.enable-webgl2', false);
@@ -356,7 +356,7 @@ user_pref('network.http.sendRefererHeader', 2); // Control when images/links sen
 user_pref('network.http.referer.spoofSource', true); // Enable spoofing a referer
 user_pref('network.http.referer.XOriginPolicy', 2); // Send Referer: 0 = in all cases 1 = to same eTLD sites 2 = only when the full hostnames match
 user_pref('network.http.referer.XOriginTrimmingPolicy', 2); // Info to be sent to header: 0 = full url 1 = URL without query string 2 = scheme, host, and port
-// user_pref('network.http.referer.defaultPolicy', 3);
+// user_pref('network.http.referer.defaultPolicy', 2);
 // user_pref('network.http.referer.defaultPolicy.pbmode', 2);
 // Security
 user_pref('security.csp.enable', true); // Enable CSP (Content Security Policy)
@@ -472,7 +472,6 @@ user_pref('media.video_stats.enabled', false); // Disable video statistics - JS 
 user_pref('dom.w3c_touch_events.enabled', 0); // Disable touch events
 user_pref('media.ondevicechange.enabled', false); // Disable MediaDevices change detection
 user_pref('webgl.enable-debug-renderer-info', false); // Disable WebGL debug info being available to websites
-// user_pref('dom.w3c_pointer_events.enabled', false); // Disable PointerEvents
 user_pref('ui.use_standins_for_native_colors', true); // Disable exposure of system colors to CSS or canvas
 // Tor-like anti-fingerprint overridings
 // user_pref('general.useragent.override', 'Mozilla/5.0 (Windows NT 6.1; rv:52.0) Gecko/20100101 Firefox/52.0');
