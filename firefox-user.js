@@ -248,7 +248,6 @@ user_pref('layers.acceleration.force-enabled', true);
 user_pref('webgl.disabled', true);
 user_pref('webgl.enable-webgl2', false);
 user_pref('webgl.dxgl.enabled', false); // [WINDOWS]
-// user_pref('webgl.min_capability_mode', true);
 user_pref('webgl.disable-extensions', true);
 user_pref('webgl.disable-fail-if-major-performance-caveat', true);
 user_pref('webgl.msaa-samples', 0);
@@ -324,7 +323,6 @@ user_pref('dom.security.https_only_mode', true); // Enable HTTPS only mode
 // user_pref('dom.security.https_only_mode.upgrade_local', true); // Enable HTTPS-Only mode for local resources
 user_pref('dom.security.https_only_mode_send_http_background_request', false); // Disable HTTP background requests
 user_pref('browser.send_pings', false); // Disable 'Hyperlink auditing'
-user_pref('browser.send_pings.require_same_host', true);
 user_pref('media.eme.enabled', false); // DRM-controlled content playback
 user_pref('network.cookie.cookieBehavior', 1); // Cookie behavior: 0 = Accept all cookies 1 = Block third-party cookies 2 = Block all cookies
 user_pref('network.cookie.thirdparty.sessionOnly', true); // Set third-party cookies to session-only
@@ -506,6 +504,7 @@ user_pref('privacy.donottrackheader.enabled', true); // DONOTTRACKMEDAMN
 user_pref('browser.contentblocking.category', 'custom');
 // user_pref('privacy.trackingprotection.enabled', true);
 user_pref('privacy.trackingprotection.pbmode.enabled', true);
+user_pref("privacy.trackingprotection.socialtracking.enabled", true);
 // user_pref('privacy.trackingprotection.cryptomining.enabled', true);
 // user_pref('privacy.trackingprotection.fingerprinting.enabled', true);
 // Extension blocklist
