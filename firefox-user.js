@@ -37,8 +37,6 @@ user_pref('layout.spellcheckDefault', 2); // 0 = none, 1 = multi-line, 2 = multi
 user_pref('browser.privatebrowsing.forceMediaMemoryCache', true); // Disable media cache from writing to disk in Private Browsing
 user_pref('media.memory_cache_max_size', 65536);
     /*      == Crash reports ==     */
-user_pref('dom.ipc.plugins.flash.subprocess.crashreporter.enabled', false); // Disable sending Flash crash reports
-user_pref('dom.ipc.plugins.reportCrashURL', false); // Disable sending the URL of the website where a plugin crashed
 user_pref('breakpad.reportURL', '');
 user_pref('toolkit.crashreporter.infoURL', '');
 user_pref('browser.chrome.errorReporter.infoURL', '');
@@ -59,7 +57,6 @@ user_pref('devtools.theme', 'dark'); // DevTools Dark Mode
 // Dark input fields fix (for Plasma DE)
 user_pref('widget.chrome.allow-gtk-dark-theme', true);
     /*      == Add-ons ==       */
-user_pref('plugin.state.flash', 0); // Disable Flash Player NPAPI plugin
 user_pref('plugin.state.java', 0); // Disable Java NPAPI plugin
 // user_pref('media.gmp-provider.enabled', false); // Disable GMP (Gecko Media Plugins)
 // System Add-ons
@@ -186,6 +183,7 @@ user_pref('permissions.default.shortcuts', 2); // Disable websites overriding Fi
 user_pref('permissions.manager.defaultsUrl', ''); // Remove special permissions for certain mozilla domains
 user_pref('webchannel.allowObject.urlWhitelist', ''); // Remove webchannel whitelist
 user_pref('pdfjs.disabled', false); // PDF Reader
+user_pref('pdfjs.enableScripting', false);
 user_pref('network.protocol-handler.external.ms-windows-store', false); // Disable links launching Windows Store on Windows 8/8.1/10 [WINDOWS]
 // Disable Windows jumplist [WINDOWS]
 user_pref('browser.taskbar.lists.enabled', false);
