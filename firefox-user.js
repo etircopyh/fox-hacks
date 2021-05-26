@@ -300,7 +300,6 @@ user_pref('security.ssl.enable_false_start', false); // No Google SSL False Star
 user_pref('security.tls.version.enable-deprecated', false); // Enforce TLS 1.0 and 1.1 downgrades as session only
 // user_pref('security.ssl.disable_session_identifiers', true); // Disable SSL session tracking [FPI]
 user_pref('security.tls.enable_0rtt_data', false); // Disable TLS1.3 0-RTT
-user_pref('security.ssl.enable_ocsp_stapling', true); // Enable OCSP Stapling
 user_pref('security.OCSP.enabled', 1);
 user_pref('security.OCSP.require', true); // OCSP fetch: false = soft-fail, true = hard-fail
 // CERTS / HPKP (HTTP Public Key Pinning)
@@ -452,10 +451,10 @@ user_pref('privacy.resistFingerprinting.block_mozAddonManager', true); // Disabl
 // user_pref('privacy.resistFingerprinting.letterboxing.dimensions', ''); // Is only meant for testing, and I recommend you DO NOT USE it
 user_pref('browser.startup.blankWindow', false); // Disable showing about:blank as soon as possible during startup
     /*      == RFP Alternatives ==      */
-// user_pref('dom.maxHardwareConcurrency', 2); // Spoof (or limit?) number of CPU cores
+user_pref('dom.maxHardwareConcurrency', 2); // Spoof number of CPU cores
 user_pref('dom.enable_resource_timing', false); // Disable resource/navigation timing
 user_pref('dom.enable_user_timing', false); // Make sure the User Timing API does not provide a new high resolution timestamp
-user_pref('dom.enable_performance', false); // Disable timing attacks
+// user_pref('dom.enable_performance', false); // Disable timing attacks
 user_pref('device.sensors.enabled', false); // Disable device sensor API
 user_pref('device.sensors.motion.enabled', false);
 user_pref('device.sensors.orientation.enabled', false);
@@ -490,7 +489,6 @@ user_pref('dom.webaudio.enabled', false); // Disable WebAudio API
     /*      == Mixed content ==     */
 user_pref('security.mixed_content.block_active_content', true); // Disable insecure active content on https pages
 user_pref('security.mixed_content.block_display_content', true); // Disable insecure passive content (such as images) on https pages
-user_pref('security.mixed_content.block_object_subrequest', true); // Block unencrypted requests from Flash on encrypted pages to mitigate MitM attacks
     /*      == Extensions ==        */
 // user_pref('extensions.enabledScopes', 5); // Lock down allowed extension directories
 // user_pref('extensions.autoDisableScopes', 15);
