@@ -300,7 +300,6 @@ user_pref('network.proxy.socks_remote_dns', true); // Enforce the proxy server t
 // user_pref('network.trr.uri', 'https://cloudflare-dns.com/dns-query'); // DoH Server | https://github.com/curl/curl/wiki/DNS-over-HTTPS
 user_pref('network.trr.resolvers', '[{ "name": "Cloudflare (non-Mozilla)", "url": "https://cloudflare-dns.com/dns-query" },{ "name": "Cloudflare", "url": "https://mozilla.cloudflare-dns.com/dns-query" },{ "name": "Google", "url": "https://dns.google/dns-query" },{ "name": "Cisco/OpenDNS", "url": "https://doh.opendns.com/dns-query" },{ "name": "Adguard", "url": "https://dns.adguard.com/dns-query" },{ "name": "Adguard Family Protection", "url": "https://dns-family.adguard.com/dns-query" },{ "name": "DNSWarden Adblock", "url": "https://doh.dnswarden.com/adblock" },{ "name": "DNSWarden Uncensored", "url": "https://doh.dnswarden.com/uncensored" },{ "name": "SecureDNS", "url": "https://doh.securedns.eu/dns-query" },{ "name": "AppliedPrivacy", "url": "https://doh.appliedprivacy.net/query" },{ "name": "Digitale Gesellschaft (CH)", "url": "https://dns.digitale-gesellschaft.ch/dns-query" }, { "name": "Quad9", "url": "https://dns.quad9.net/dns-query" }]'); // DoH Resolvers
 user_pref('network.security.esni.enabled', true); // Enable ESNI
-user_pref('network.ftp.enabled', false); // Disable FTP
 // user_pref('network.file.disable_unc_paths', false); // Disable using UNC (Uniform Naming Convention) paths NOTE: Can cause extension storage to fail
 user_pref('network.gio.supported-protocols', ''); // Disable GIO as a potential proxy bypass vector
 // Disable resource preloading / prefetch
@@ -374,7 +373,7 @@ user_pref('network.http.referer.XOriginTrimmingPolicy', 2); // Info to be sent t
 // user_pref('network.http.referer.defaultPolicy.pbmode', 2);
 // Security
 user_pref('security.csp.enable', true); // Enable CSP (Content Security Policy)
-user_pref('security.dialog_enable_delay', 700); // Enforce a security delay on some confirmation dialogs such as install, open/save
+user_pref('security.dialog_enable_delay', 1000); // Enforce a security delay on some confirmation dialogs such as install, open/save
 // First Party Isolation
 user_pref('privacy.firstparty.isolate', true); // Enable First Party Isolation
 user_pref('privacy.firstparty.isolate.restrict_opener_access', true); // Enforce FPI restriction for window.opener
@@ -383,12 +382,14 @@ user_pref('privacy.firstparty.isolate.restrict_opener_access', true); // Enforce
 // Service Workers
 user_pref('dom.serviceWorkers.enabled', false); // Disable service workers
 user_pref('dom.push.enabled', false); // Disable Push Notifications
+user_pref("dom.push.connection.enabled", false);
+user_pref("dom.push.serverURL", "");
 // user_pref('dom.push.userAgentID', ''); // To remove all notification subscriptions
 user_pref('permissions.default.desktop-notification', 2); // Disable desktop notifications
 // user_pref('dom.event.contextmenu.enabled', false); // Disable website control over browser right-click context menu NOTE: May cause context menu doubling
 // user_pref('dom.event.clipboardevents.enabled', false); // Disable website access to clipboard events/content NOTE: Can break some websites functionality
 user_pref('middlemouse.paste', false); // Disable middlemouse paste leaking clipboard content on Linux after autoscroll
-user_pref('dom.allow_cut_copy', false); // Disable clipboard commands (cut/copy) from 'non-privileged' content
+// user_pref('dom.allow_cut_copy', false); // Disable clipboard commands (cut/copy) from 'non-privileged' content
 user_pref('dom.disable_beforeunload', true); // Disable 'Confirm you want to leave' dialog on page close
 user_pref('dom.vibrator.enabled', false); // Disable shaking the screen
 // user_pref('javascript.options.asmjs', false); // Disable asmjs
@@ -413,8 +414,13 @@ user_pref('toolkit.telemetry.bhrPing.enabled', false);
 user_pref('toolkit.telemetry.firstShutdownPing.enabled', false);
 user_pref('toolkit.telemetry.reportingpolicy.firstRun', false);
 user_pref('toolkit.telemetry.coverage.opt-out', true);
+user_pref('experiments.activeExperiment', false);
+user_pref('experiments.enabled', false);
+user_pref('experiments.supported', false);
+user_pref('network.allow-experiments', false);
 user_pref('toolkit.coverage.opt-out', true);
 user_pref('toolkit.coverage.endpoint.base', '');
+user_pref("datareporting.policy.dataSubmissionEnabled", false);
 user_pref('datareporting.healthreport.service.enabled', false); // Disable Health Reports
 user_pref('datareporting.healthreport.uploadEnabled', false);
 user_pref('datareporting.healthreport.infoURL', '');
@@ -439,9 +445,14 @@ user_pref('permissions.default.geo', 2); // Location permissions: 0 = always ask
 user_pref('permissions.delegation.enabled', false); // Disable permissions delegation
 user_pref('browser.region.network.url', '');
 user_pref('browser.region.update.enabled', false); // Disable region updates
+user_pref("browser.search.isUS", true);
 user_pref('browser.search.region', 'US'); // US region for search engine
 user_pref('browser.search.countryCode', 'US');
 user_pref('browser.search.geoip.url', '');
+user_pref("browser.search.geoSpecificDefaults", false);
+user_pref("browser.search.geoSpecificDefaults.url", "");
+user_pref("browser.search.geoip.timeout", 1);
+user_pref("browser.search.geoip.url", "");
 // Disable using the OS's geolocation service
 user_pref('geo.provider.ms-windows-location', false); // [WINDOWS]
 user_pref('geo.provider.use_corelocation', false); // [MAC]
@@ -453,17 +464,26 @@ user_pref('browser.safebrowsing.malware.enabled', false);
 user_pref('browser.safebrowsing.phishing.enabled', false);
 user_pref('browser.safebrowsing.blockedURIs.enabled', false);
 user_pref('browser.safebrowsing.downloads.enabled', false);
+user_pref("browser.safebrowsing.downloads.remote.url", "");
 user_pref('browser.safebrowsing.downloads.remote.enabled', false);
 user_pref('browser.safebrowsing.downloads.remote.block_dangerous', false);
 user_pref('browser.safebrowsing.downloads.remote.block_dangerous_host', false);
 user_pref('browser.safebrowsing.downloads.remote.block_potentially_unwanted', false);
 user_pref('browser.safebrowsing.downloads.remote.block_uncommon', false);
+user_pref("browser.safebrowsing.provider.google.reportURL", "");
+user_pref("browser.safebrowsing.provider.google.reportMalwareMistakeURL", "");
+user_pref("browser.safebrowsing.provider.google.reportPhishMistakeURL", "");
 user_pref('browser.safebrowsing.provider.google.gethashURL', '');
 user_pref('browser.safebrowsing.provider.google.updateURL', '');
+user_pref("browser.safebrowsing.provider.google4.dataSharingURL", "");
+user_pref("browser.safebrowsing.provider.google4.reportMalwareMistakeURL", "");
+user_pref("browser.safebrowsing.provider.google4.reportPhishMistakeURL", "");
+user_pref("browser.safebrowsing.provider.google4.reportURL", "");
 user_pref('browser.safebrowsing.provider.google4.gethashURL', '');
 user_pref('browser.safebrowsing.provider.google4.updateURL', '');
 user_pref('browser.safebrowsing.provider.mozilla.gethashURL', '');
 user_pref('browser.safebrowsing.provider.mozilla.updateURL', '');
+user_pref("browser.safebrowsing.reportPhishURL", "");
     /*      == RFP (Resist Fingerprinting) ==       */
 // user_pref('privacy.resistFingerprinting', true); // Tor Uplift project that makes Firefox more resistant to browser fingerprinting (can cause breakage)
 user_pref('privacy.resistFingerprinting.block_mozAddonManager', true); // Disable mozAddonManager Web API
@@ -572,6 +592,8 @@ user_pref('network.auth.subresource-http-auth-allow', 1); // HTTP authentication
 // user_pref('security.ssl3.ecdhe_ecdsa_aes_128_sha', false);
 // user_pref('security.ssl3.ecdhe_rsa_aes_128_sha', false);
 // user_pref('security.ssl3.ecdhe_rsa_aes_256_sha', false);
+// user_pref("security.ssl3.rsa_aes_128_gcm_sha256", false); // no PFS
+// user_pref("security.ssl3.rsa_aes_256_gcm_sha384", false); // no PFS
 // user_pref('security.ssl3.rsa_aes_128_sha', false); // no PFS
 // user_pref('security.ssl3.rsa_aes_256_sha', false); // no PFS
 
