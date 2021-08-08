@@ -22,6 +22,8 @@ user_pref('browser.search.update', false); // Disable search update
 user_pref('browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons', false); // Disable CFR
 user_pref('browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features', false); // Disable CFR
 user_pref('extensions.pocket.enabled', false); // Disable and hide Pocket
+user_pref('extensions.pocket.site', '');
+user_pref('extensions.pocket.api', '');
 user_pref('browser.messaging-system.whatsNewPanel.enabled', false); // What's New [FF70+]
 // user_pref('identity.fxaccounts.enabled', false); // Disable and hide Firefox Accounts and Sync
 user_pref('network.manage-offline-status', false); // See bugzilla 620472
