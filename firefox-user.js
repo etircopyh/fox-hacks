@@ -6,6 +6,10 @@ user_pref('app.update.auto', false);
 user_pref("app.update.service.enabled", false);
 user_pref("app.update.BITS.enabled", false);
 user_pref('app.update.url', '');
+user_pref("corroborator.enabled", false);
+user_pref("browser.slowStartup.samples", "0");
+user_pref("browser.slowStartup.maxSamples", 0);
+user_pref("browser.slowStartup.notificationDisabled", true);
 user_pref("browser.quitShortcut.disabled", true); // Disable Ctrl-Q quit shortcut
 user_pref('browser.uidensity', 1); // User Interface density
 user_pref('layout.css.devPixelsPerPx', 1); // Global pages zoom level
