@@ -73,6 +73,7 @@ user_pref('plugin.state.java', 0); // Disable Java NPAPI plugin
 user_pref('app.normandy.first_run', false);
 user_pref('app.normandy.enabled', false); // Disable Normandy/Shield
 user_pref('app.normandy.api_url', '');
+user_pref("extensions.abuseReport.enabled", false);
 user_pref('extensions.checkCompatibility', false); // Disable extensions compatibility checks
 // user_pref('extensions.systemAddon.update.enabled', false); // Disable system add-ons autoupdate
 // user_pref('extensions.systemAddon.update.url', '');
@@ -84,6 +85,8 @@ user_pref('extensions.screenshots.upload-disabled', true); // Disable uploading 
 // user_pref('extensions.formautofill.creditCards.available', false);
 // user_pref('extensions.formautofill.heuristics.enabled', false);
 user_pref('extensions.webcompat-reporter.enabled', false); // Disable Web Compatibility Reporter
+user_pref('extensions.webcompat.enable_shims', false);
+user_pref('extensions.webcompat.enable_picture_in_picture_overrides', false);
 user_pref('extensions.webcompat.perform_injections', false);
 user_pref('extensions.webcompat.perform_ua_overrides', false);
 user_pref('browser.ping-centre.telemetry', false);
