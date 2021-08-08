@@ -103,6 +103,9 @@ user_pref('permissions.default.camera', 2); // Block camera access
 user_pref('permissions.default.microphone', 2); // Block microphone access
 user_pref('permissions.default.xr', 2); // Block virtual reality devices
 user_pref('media.default_volume', '0.6'); // Set default HTML5 media volume
+user_pref('full-screen-api.ignore-widgets', true); // Borderless fullscreen
+// Autoplay
+// user_pref("image.animation_mode", "none"); // GIF animation mode: "none" "once" "normal"
 user_pref('media.autoplay.default', 5); // Disable Autoplay
 user_pref('media.autoplay.block-event.enabled', true);
 user_pref('media.autoplay.block-webaudio', true);
@@ -151,7 +154,7 @@ user_pref('browser.newtabpage.activity-stream.default.sites', ''); // Clear defa
 user_pref('browser.aboutHomeSnippets.updateUrl', '');
     /*      == URL bar ==       */
 // user_pref('keyword.enabled', false); // Disable location bar using search
-// user_pref('browser.fixup.alternate.enabled', false); // Disable location bar domain guessing
+user_pref('browser.fixup.alternate.enabled', false); // Disable location bar domain guessing
 user_pref('browser.fixup.hide_user_pass', true);
 user_pref('browser.urlbar.trimURLs', false); // Display full URL in address bar
 // URL bar mouse-clicks behavior
@@ -182,6 +185,7 @@ user_pref('browser.pagethumbnails.capturing_disabled', true); // Disable page th
 user_pref('browser.uitour.enabled', false); // Disable UITour backend so there is no chance that a remote page can use it
 user_pref('browser.uitour.url', '');
 user_pref('dom.webnotifications.enabled', false);
+user_pref("dom.webnotifications.serviceworker.enabled", false);
 // user_pref('devtools.chrome.enabled', false); // Disable various developer tools in browser context
 // Disable WebIDE to prevent remote debugging and ADB extension download
 user_pref('devtools.debugger.remote-enabled', false);
@@ -197,6 +201,7 @@ user_pref('permissions.manager.defaultsUrl', ''); // Remove special permissions 
 user_pref('webchannel.allowObject.urlWhitelist', ''); // Remove webchannel whitelist
 user_pref('pdfjs.disabled', false); // PDF Reader
 user_pref('pdfjs.enableScripting', false);
+user_pref("network.http.windows-sso.enabled", false); // Disable automatic authentication on Microsoft sites
 user_pref('network.protocol-handler.external.ms-windows-store', false); // Disable links launching Windows Store on Windows 8/8.1/10 [WINDOWS]
 // Disable Windows jumplist [WINDOWS]
 user_pref('browser.taskbar.lists.enabled', false);
