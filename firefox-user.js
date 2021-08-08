@@ -3,6 +3,8 @@
 /*      >>GENERAL<<        */
     /*      == Browser ==       */
 user_pref('app.update.auto', false);
+user_pref("app.update.service.enabled", false);
+user_pref("app.update.BITS.enabled", false);
 user_pref('app.update.url', '');
 user_pref("browser.quitShortcut.disabled", true); // Disable Ctrl-Q quit shortcut
 user_pref('browser.uidensity', 1); // User Interface density
