@@ -12,6 +12,8 @@ user_pref("browser.slowStartup.maxSamples", 0);
 user_pref("browser.slowStartup.notificationDisabled", true);
 user_pref("browser.quitShortcut.disabled", true); // Disable Ctrl-Q quit shortcut
 user_pref('browser.uidensity', 1); // User Interface density
+user_pref('browser.compactmode.show', true); // Show Compact mode
+user_pref("widget.non-native-theme.enabled", false); // Disable non-native widget theme
 user_pref('layout.css.devPixelsPerPx', 1); // Global pages zoom level
 user_pref('browser.shell.shortcutFavicons', false);
 // user_pref('alerts.showFavicons', false);
