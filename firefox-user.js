@@ -273,7 +273,8 @@ user_pref('layers.enable-tiles', true); // Tiles
 user_pref('browser.preferences.defaultPerformanceSettings.enabled', false); // Disable Firefox 'recommended' performance settings
 // user_pref('dom.ipc.processCount', 1); // Adjust Web Content process limit
 user_pref('browser.tabs.unloadOnLowMemory', true); // Tabs discarding
-user_pref('security.sandbox.content.level', 2); // Sandbox content level
+user_pref('security.sandbox.content.level', 0); // Sandbox content level (Optimal = 2)
+user_pref('fission.autostart', false);
 // Wayland VA-API
 user_pref('widget.wayland-dmabuf-vaapi.enabled', true);
 user_pref('media.ffvpx.enabled', false); // Disable bundled FFmpeg
