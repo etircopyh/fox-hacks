@@ -258,6 +258,7 @@ user_pref('gfx.font_rendering.graphite.enabled', false); // Disable graphite
     /*      == General ==        */
 // user_pref('gfx.webrender.all', true); // Enable WebRender
 // user_pref('layout.frame_rate', 60); // Pages FPS
+user_pref("canvas.capturestream.enabled", false); // Disable Canvas
 user_pref('gfx.canvas.azure.accelerated', true);
 user_pref('layers.acceleration.force-enabled', true);
 // WebGL
