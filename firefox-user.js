@@ -3,18 +3,21 @@
 /*      >>GENERAL<<        */
     /*      == Browser ==       */
 user_pref('app.update.auto', false);
-user_pref("app.update.service.enabled", false);
-user_pref("app.update.BITS.enabled", false);
+user_pref('app.update.service.enabled', false);
+user_pref('app.update.BITS.enabled', false);
 user_pref('app.update.url', '');
-user_pref("corroborator.enabled", false);
-user_pref("browser.slowStartup.samples", "0");
-user_pref("browser.slowStartup.maxSamples", 0);
-user_pref("browser.slowStartup.notificationDisabled", true);
-user_pref("browser.quitShortcut.disabled", true); // Disable Ctrl-Q quit shortcut
+user_pref('corroborator.enabled', false);
+user_pref('browser.slowStartup.samples', '0');
+user_pref('browser.slowStartup.maxSamples', 0);
+user_pref('browser.slowStartup.notificationDisabled', true);
+user_pref('browser.quitShortcut.disabled', true); // Disable Ctrl-Q quit shortcut
 user_pref('browser.uidensity', 1); // User Interface density
 user_pref('browser.compactmode.show', true); // Show Compact mode
-user_pref("widget.non-native-theme.enabled", false); // Disable non-native widget theme
+user_pref('browser.zoom.siteSpecific', true); // Site specific zoom
+user_pref('widget.non-native-theme.enabled', false); // Disable non-native widget theme
 user_pref('layout.css.devPixelsPerPx', 1); // Global pages zoom level
+user_pref('browser.shell.checkDefaultBrowser', false);
+user_pref('browser.shell.didSkipDefaultBrowserCheckOnFirstRun', true);
 user_pref('browser.shell.shortcutFavicons', false);
 //user_pref('alerts.showFavicons', false);
 user_pref('browser.search.update', false); // Disable search update
@@ -24,6 +27,11 @@ user_pref('browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features', 
 user_pref('extensions.pocket.enabled', false); // Disable and hide Pocket
 user_pref('extensions.pocket.site', '');
 user_pref('extensions.pocket.api', '');
+user_pref('browser.contentblocking.report.hide_vpn_banner', true);
+user_pref('browser.contentblocking.report.show_mobile_app', false);
+user_pref('browser.contentblocking.report.lockwise.enabled', false);
+user_pref('browser.contentblocking.report.monitor.enabled', false);
+user_pref('browser.contentblocking.report.vpn.enabled', false);
 user_pref('browser.messaging-system.whatsNewPanel.enabled', false); // What's New [FF70+]
 //user_pref('identity.fxaccounts.enabled', false); // Disable and hide Firefox Accounts and Sync
 user_pref('network.manage-offline-status', false); // See bugzilla 620472
@@ -68,12 +76,13 @@ user_pref('devtools.theme', 'dark'); // DevTools Dark Mode
 user_pref('widget.chrome.allow-gtk-dark-theme', true);
     /*      == Add-ons ==       */
 user_pref('plugin.state.java', 0); // Disable Java NPAPI plugin
-//user_pref('media.gmp-provider.enabled', false); // Disable GMP (Gecko Media Plugins)
 // System Add-ons
 user_pref('app.normandy.first_run', false);
 user_pref('app.normandy.enabled', false); // Disable Normandy/Shield
 user_pref('app.normandy.api_url', '');
-user_pref("extensions.abuseReport.enabled", false);
+user_pref('app.normandy.user_id', '');
+user_pref('app.normandy.shieldLearnMoreUrl', '');
+user_pref('extensions.abuseReport.enabled', false);
 user_pref('extensions.checkCompatibility', false); // Disable extensions compatibility checks
 //user_pref('extensions.systemAddon.update.enabled', false); // Disable system add-ons autoupdate
 //user_pref('extensions.systemAddon.update.url', '');
@@ -85,6 +94,7 @@ user_pref('extensions.screenshots.upload-disabled', true); // Disable uploading 
 //user_pref('extensions.formautofill.creditCards.available', false);
 //user_pref('extensions.formautofill.heuristics.enabled', false);
 user_pref('extensions.webcompat-reporter.enabled', false); // Disable Web Compatibility Reporter
+user_pref('extensions.webcompat-reporter.newIssueEndpoint', '');
 user_pref('extensions.webcompat.enable_shims', false);
 user_pref('extensions.webcompat.enable_picture_in_picture_overrides', false);
 user_pref('extensions.webcompat.perform_injections', false);
@@ -105,7 +115,7 @@ user_pref('permissions.default.xr', 2); // Block virtual reality devices
 user_pref('media.default_volume', '0.6'); // Set default HTML5 media volume
 user_pref('full-screen-api.ignore-widgets', true); // Borderless fullscreen
 // Autoplay
-//user_pref("image.animation_mode", "none"); // GIF animation mode: "none" "once" "normal"
+//user_pref('image.animation_mode', 'none'); // GIF animation mode: 'none' 'once' 'normal'
 user_pref('media.autoplay.default', 5); // Disable Autoplay
 user_pref('media.autoplay.block-event.enabled', true);
 user_pref('media.autoplay.block-webaudio', true);
@@ -178,6 +188,7 @@ user_pref('browser.urlbar.speculativeConnect.enabled', false); // Disable locati
 // Misc
 user_pref('accessibility.force_disabled', 1); // Prevent accessibility services from accessing your browser
 user_pref('accessibility.typeaheadfind.flashBar', 0);
+//user_pref('browser.sessionstore.privacy_level', 0); // Store extra session data: 0 = for any site 1 = for unencrypted (non-HTTPS) sites only 2 = Never
 user_pref('browser.sessionstore.interval', 30000); // Minimum interval between session save operations (ms)
 user_pref('beacon.enabled', false); // Disable sending additional analytics to web servers
 user_pref('browser.helperApps.deleteTempFileOnExit', true); // Remove temp files opened with an external application
@@ -185,7 +196,7 @@ user_pref('browser.pagethumbnails.capturing_disabled', true); // Disable page th
 user_pref('browser.uitour.enabled', false); // Disable UITour backend so there is no chance that a remote page can use it
 user_pref('browser.uitour.url', '');
 user_pref('dom.webnotifications.enabled', false);
-user_pref("dom.webnotifications.serviceworker.enabled", false);
+user_pref('dom.webnotifications.serviceworker.enabled', false);
 //user_pref('devtools.chrome.enabled', false); // Disable various developer tools in browser context
 // Disable WebIDE to prevent remote debugging and ADB extension download
 user_pref('devtools.debugger.remote-enabled', false);
@@ -193,6 +204,10 @@ user_pref('devtools.webide.enabled', false);
 user_pref('devtools.webide.autoinstallADBExtension', false);
 user_pref('devtools.webide.autoinstallFxdtAdapters', false);
 user_pref('devtools.debugger.force-local', true);
+user_pref('devtools.performance.recording.ui-base-url', 'http://localhost:55555'); // Default Value : https://profiler.firefox.com
+user_pref('devtools.devices.url', '');
+user_pref('devtools.remote.adb.extensionURL', '');
+user_pref('devtools.remote.adb.extensionID', ''); // default adb@mozilla.org
 user_pref('mathml.disabled', true); // Disable MathML
 //user_pref('svg.disabled', true); // Disable in-content SVG
 user_pref('middlemouse.contentLoadURL', false); // Disable middle mouse click opening links from clipboard
@@ -201,7 +216,9 @@ user_pref('permissions.manager.defaultsUrl', ''); // Remove special permissions 
 user_pref('webchannel.allowObject.urlWhitelist', ''); // Remove webchannel whitelist
 user_pref('pdfjs.disabled', false); // PDF Reader
 user_pref('pdfjs.enableScripting', false);
-user_pref("network.http.windows-sso.enabled", false); // Disable automatic authentication on Microsoft sites
+user_pref('pdfjs.previousHandler.alwaysAskBeforeHandling', true);
+user_pref('pdfjs.enabledCache.state', false);
+user_pref('network.http.windows-sso.enabled', false); // Disable automatic authentication on Microsoft sites
 user_pref('network.protocol-handler.external.ms-windows-store', false); // Disable links launching Windows Store on Windows 8/8.1/10 [WINDOWS]
 // Disable Windows jumplist [WINDOWS]
 user_pref('browser.taskbar.lists.enabled', false);
@@ -258,7 +275,7 @@ user_pref('gfx.font_rendering.graphite.enabled', false); // Disable graphite
     /*      == General ==        */
 //user_pref('gfx.webrender.all', true); // Enable WebRender
 //user_pref('layout.frame_rate', 60); // Pages FPS
-user_pref("canvas.capturestream.enabled", false); // Disable Canvas
+user_pref('canvas.capturestream.enabled', false); // Disable Canvas
 user_pref('gfx.canvas.azure.accelerated', true);
 user_pref('layers.acceleration.force-enabled', true);
 // WebGL
@@ -315,11 +332,12 @@ user_pref('security.ssl.require_safe_negotiation', true); // Disable old SSL/TLS
 // Control TLS versions (Firefox telemetry (April 2019) shows only 0.5% of TLS web traffic uses 1.0 or 1.1) 1=TLS 1.0, 2=TLS 1.1, 3=TLS 1.2, 4=TLS 1.3
 user_pref('security.tls.version.min', 3);
 user_pref('security.tls.version.max', 4);
+user_pref('security.tls.version.fallback-limit', 3);
 user_pref('security.ssl.enable_false_start', false); // No Google SSL False Start
 user_pref('security.tls.version.enable-deprecated', false); // Enforce TLS 1.0 and 1.1 downgrades as session only
 //user_pref('security.ssl.disable_session_identifiers', true); // Disable SSL session tracking [FPI]
 user_pref('security.tls.enable_0rtt_data', false); // Disable TLS1.3 0-RTT
-user_pref('security.OCSP.enabled', 1);
+user_pref('security.OCSP.enabled', 0);
 user_pref('security.OCSP.require', true); // OCSP fetch: false = soft-fail, true = hard-fail
 // CERTS / HPKP (HTTP Public Key Pinning)
 // Enforce CRLite
@@ -339,7 +357,13 @@ user_pref('dom.security.https_only_mode', true); // Enable HTTPS only mode
 //user_pref('dom.security.https_only_mode.upgrade_local', true); // Enable HTTPS-Only mode for local resources
 user_pref('dom.security.https_only_mode_send_http_background_request', false); // Disable HTTP background requests
 user_pref('browser.send_pings', false); // Disable 'Hyperlink auditing'
+// DRM
 user_pref('media.eme.enabled', false); // DRM-controlled content playback
+user_pref('media.gmp-widevinecdm.visible', false);
+user_pref('media.gmp-widevinecdm.enabled', false);
+//user_pref('media.gmp-provider.enabled', false); // Disable GMP (Gecko Media Plugins)
+user_pref('media.gmp-manager.url', 'data:text/plain,');
+user_pref('media.gmp-gmpopenh264.enabled', false);
 user_pref('network.cookie.cookieBehavior', 1); // Cookie behavior: 0 = Accept all cookies 1 = Block third-party cookies 2 = Block all cookies
 user_pref('network.cookie.thirdparty.sessionOnly', true); // Set third-party cookies to session-only
 user_pref('network.cookie.thirdparty.nonsecureSessionOnly', true);
@@ -356,7 +380,6 @@ user_pref('dom.caches.enabled', false); // Disable service worker cache and cach
 user_pref('dom.targetBlankNoOpener.enabled', true); // Makes rel=noopener implicit
 //user_pref('dom.storageManager.enabled', false); // Disable Storage API
 //user_pref('dom.storage_access.enabled', false); // Disable Storage Access API
-user_pref('browser.sessionstore.privacy_level', 0); // Store extra session data: 0 = for any site 1 = for unencrypted (non-HTTPS) sites only 2 = Never
 user_pref('network.IDN_show_punycode', true); // Enforce Punycode for Internationalized Domain Names to eliminate possible spoofing
 user_pref('privacy.userContext.enabled', true); // Enable Container Tabs
 user_pref('privacy.userContext.ui.enabled', true); // Enable Container Tabs setting in preferences
@@ -382,8 +405,8 @@ user_pref('privacy.firstparty.isolate.restrict_opener_access', true); // Enforce
 // Service Workers
 user_pref('dom.serviceWorkers.enabled', false); // Disable service workers
 user_pref('dom.push.enabled', false); // Disable Push Notifications
-user_pref("dom.push.connection.enabled", false);
-user_pref("dom.push.serverURL", "");
+user_pref('dom.push.connection.enabled', false);
+user_pref('dom.push.serverURL', '');
 //user_pref('dom.push.userAgentID', ''); // To remove all notification subscriptions
 user_pref('permissions.default.desktop-notification', 2); // Disable desktop notifications
 //user_pref('dom.event.contextmenu.enabled', false); // Disable website control over browser right-click context menu NOTE: May cause context menu doubling
@@ -398,6 +421,7 @@ user_pref('dom.vibrator.enabled', false); // Disable shaking the screen
 //user_pref('javascript.options.baselinejit', false);
 user_pref('javascript.options.wasm', false); // Disable WebAssembly
 //user_pref('javascript.options.jit_trustedprincipals', true);
+user_pref('javascript.options.shared_memory', false);
 user_pref('dom.targetBlankNoOpener.enabled', true); // Enable (limited but sufficient) window.opener protection
     /*      == Telemetry >_< ==        */
 user_pref('toolkit.telemetry.unified', false);
@@ -418,9 +442,10 @@ user_pref('experiments.activeExperiment', false);
 user_pref('experiments.enabled', false);
 user_pref('experiments.supported', false);
 user_pref('network.allow-experiments', false);
+user_pref('toolkit.coverage.enabled', false);
 user_pref('toolkit.coverage.opt-out', true);
 user_pref('toolkit.coverage.endpoint.base', '');
-user_pref("datareporting.policy.dataSubmissionEnabled", false);
+user_pref('datareporting.policy.dataSubmissionEnabled', false);
 user_pref('datareporting.healthreport.service.enabled', false); // Disable Health Reports
 user_pref('datareporting.healthreport.uploadEnabled', false);
 user_pref('datareporting.healthreport.infoURL', '');
@@ -438,6 +463,7 @@ user_pref('dom.disable_window_move_resize', true); // Prevent scripts from movin
 user_pref('browser.link.open_newwindow', 3); // Open links targeting new windows in a new tab instead 1 = most recent window or tab, 2 = new window, 3 = new tab
 user_pref('browser.link.open_newwindow.restriction', 0);
 user_pref('dom.disable_open_during_load', true); // Block popup windows
+user_pref('dom.popup_maximum', 4);
 user_pref('dom.popup_allowed_events', 'click dblclick mousedown pointerdown'); // Limit events that can cause a popup
     /*      == Geolocation ==       */
 user_pref('geo.enabled', false); // Location-Aware Browsing
@@ -445,45 +471,46 @@ user_pref('permissions.default.geo', 2); // Location permissions: 0 = always ask
 user_pref('permissions.delegation.enabled', false); // Disable permissions delegation
 user_pref('browser.region.network.url', '');
 user_pref('browser.region.update.enabled', false); // Disable region updates
-user_pref("browser.search.isUS", true);
+user_pref('browser.search.isUS', true);
 user_pref('browser.search.region', 'US'); // US region for search engine
 user_pref('browser.search.countryCode', 'US');
 user_pref('browser.search.geoip.url', '');
-user_pref("browser.search.geoSpecificDefaults", false);
-user_pref("browser.search.geoSpecificDefaults.url", "");
-user_pref("browser.search.geoip.timeout", 1);
-user_pref("browser.search.geoip.url", "");
+user_pref('browser.search.geoSpecificDefaults', false);
+user_pref('browser.search.geoSpecificDefaults.url', '');
+user_pref('browser.search.geoip.timeout', 1);
+user_pref('browser.search.geoip.url', '');
 // Disable using the OS's geolocation service
 user_pref('geo.provider.ms-windows-location', false); // [WINDOWS]
 user_pref('geo.provider.use_corelocation', false); // [MAC]
 user_pref('geo.provider.use_gpsd', false); // [LINUX]
 user_pref('geo.wifi.uri', 'https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%'); // Use Mozilla geolocation service instead of Google when geolocation is enabled
+user_pref('geo.provider.network.url', 'https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%');
 user_pref('geo.wifi.logging.enabled', false); // Disable logging to console when geolocation is enabled
     /*      == Safe Browsing ==     */
 user_pref('browser.safebrowsing.malware.enabled', false);
 user_pref('browser.safebrowsing.phishing.enabled', false);
 user_pref('browser.safebrowsing.blockedURIs.enabled', false);
 user_pref('browser.safebrowsing.downloads.enabled', false);
-user_pref("browser.safebrowsing.downloads.remote.url", "");
+user_pref('browser.safebrowsing.downloads.remote.url', '');
 user_pref('browser.safebrowsing.downloads.remote.enabled', false);
 user_pref('browser.safebrowsing.downloads.remote.block_dangerous', false);
 user_pref('browser.safebrowsing.downloads.remote.block_dangerous_host', false);
 user_pref('browser.safebrowsing.downloads.remote.block_potentially_unwanted', false);
 user_pref('browser.safebrowsing.downloads.remote.block_uncommon', false);
-user_pref("browser.safebrowsing.provider.google.reportURL", "");
-user_pref("browser.safebrowsing.provider.google.reportMalwareMistakeURL", "");
-user_pref("browser.safebrowsing.provider.google.reportPhishMistakeURL", "");
+user_pref('browser.safebrowsing.provider.google.reportURL', '');
+user_pref('browser.safebrowsing.provider.google.reportMalwareMistakeURL', '');
+user_pref('browser.safebrowsing.provider.google.reportPhishMistakeURL', '');
 user_pref('browser.safebrowsing.provider.google.gethashURL', '');
 user_pref('browser.safebrowsing.provider.google.updateURL', '');
-user_pref("browser.safebrowsing.provider.google4.dataSharingURL", "");
-user_pref("browser.safebrowsing.provider.google4.reportMalwareMistakeURL", "");
-user_pref("browser.safebrowsing.provider.google4.reportPhishMistakeURL", "");
-user_pref("browser.safebrowsing.provider.google4.reportURL", "");
+user_pref('browser.safebrowsing.provider.google4.dataSharingURL', '');
+user_pref('browser.safebrowsing.provider.google4.reportMalwareMistakeURL', '');
+user_pref('browser.safebrowsing.provider.google4.reportPhishMistakeURL', '');
+user_pref('browser.safebrowsing.provider.google4.reportURL', '');
 user_pref('browser.safebrowsing.provider.google4.gethashURL', '');
 user_pref('browser.safebrowsing.provider.google4.updateURL', '');
 user_pref('browser.safebrowsing.provider.mozilla.gethashURL', '');
 user_pref('browser.safebrowsing.provider.mozilla.updateURL', '');
-user_pref("browser.safebrowsing.reportPhishURL", "");
+user_pref('browser.safebrowsing.reportPhishURL', '');
     /*      == RFP (Resist Fingerprinting) ==       */
 //user_pref('privacy.resistFingerprinting', true); // Tor Uplift project that makes Firefox more resistant to browser fingerprinting (can cause breakage)
 user_pref('privacy.resistFingerprinting.block_mozAddonManager', true); // Disable mozAddonManager Web API
@@ -502,7 +529,7 @@ user_pref('device.sensors.orientation.enabled', false);
 user_pref('dom.gamepad.enabled', false); // Disable gamepad API - USB device ID enumeration
 user_pref('dom.netinfo.enabled', false); // Disable giving away network info
 user_pref('media.webspeech.synth.enabled', false); // Disable the SpeechSynthesis (Text-to-Speech) part of the Web Speech API
-user_pref('media.video_stats.enabled', false); // Disable video statistics - JS performance fingerprinting
+//user_pref('media.video_stats.enabled', false); // Disable video statistics - JS performance fingerprinting
 user_pref('dom.w3c_touch_events.enabled', 0); // Disable touch events
 user_pref('media.ondevicechange.enabled', false); // Disable MediaDevices change detection
 user_pref('webgl.enable-debug-renderer-info', false); // Disable WebGL debug info being available to websites
@@ -540,9 +567,10 @@ user_pref('privacy.donottrackheader.enabled', true); // DONOTTRACKMEDAMN
 user_pref('browser.contentblocking.category', 'custom');
 //user_pref('privacy.trackingprotection.enabled', true);
 user_pref('privacy.trackingprotection.pbmode.enabled', true);
-user_pref("privacy.trackingprotection.socialtracking.enabled", true);
+user_pref('privacy.trackingprotection.socialtracking.enabled', true);
 //user_pref('privacy.trackingprotection.cryptomining.enabled', true);
 //user_pref('privacy.trackingprotection.fingerprinting.enabled', true);
+user_pref('privacy.trackingprotection.annotate_channels', false);
 // Extension blocklist
 user_pref('extensions.blocklist.enabled', true);
 user_pref('services.blocklist.update_enabled', true);
@@ -592,8 +620,8 @@ user_pref('network.auth.subresource-http-auth-allow', 1); // HTTP authentication
 //user_pref('security.ssl3.ecdhe_ecdsa_aes_128_sha', false);
 //user_pref('security.ssl3.ecdhe_rsa_aes_128_sha', false);
 //user_pref('security.ssl3.ecdhe_rsa_aes_256_sha', false);
-//user_pref("security.ssl3.rsa_aes_128_gcm_sha256", false); // no PFS
-//user_pref("security.ssl3.rsa_aes_256_gcm_sha384", false); // no PFS
+//user_pref('security.ssl3.rsa_aes_128_gcm_sha256', false); // no PFS
+//user_pref('security.ssl3.rsa_aes_256_gcm_sha384', false); // no PFS
 //user_pref('security.ssl3.rsa_aes_128_sha', false); // no PFS
 //user_pref('security.ssl3.rsa_aes_256_sha', false); // no PFS
 
