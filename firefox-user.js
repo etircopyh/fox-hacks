@@ -280,10 +280,7 @@ user_pref('gfx.canvas.azure.accelerated', true);
 user_pref('layers.acceleration.force-enabled', true);
 // WebGL
 user_pref('webgl.disabled', true);
-user_pref('webgl.enable-webgl2', false);
-user_pref('webgl.dxgl.enabled', false); // [WINDOWS]
 user_pref('webgl.disable-extensions', true);
-user_pref('webgl.disable-fail-if-major-performance-caveat', true);
 user_pref('webgl.msaa-samples', 0);
 user_pref('layers.geometry.d3d11.enabled', false); // Disable usage of D3D11
 user_pref('layers.enable-tiles', true); // Tiles
@@ -359,7 +356,7 @@ user_pref('dom.security.https_only_mode_send_http_background_request', false); /
 user_pref('browser.send_pings', false); // Disable 'Hyperlink auditing'
 // DRM
 user_pref('media.eme.enabled', false); // DRM-controlled content playback
-user_pref('media.gmp-widevinecdm.visible', false);
+// user_pref('media.gmp-widevinecdm.visible', false);
 user_pref('media.gmp-widevinecdm.enabled', false);
 //user_pref('media.gmp-provider.enabled', false); // Disable GMP (Gecko Media Plugins)
 user_pref('media.gmp-manager.url', 'data:text/plain,');
