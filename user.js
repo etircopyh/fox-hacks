@@ -167,6 +167,7 @@ user_pref('browser.aboutHomeSnippets.updateUrl', '');
 user_pref('browser.fixup.alternate.enabled', false); // Disable location bar domain guessing
 user_pref('browser.fixup.hide_user_pass', true);
 user_pref('browser.urlbar.trimURLs', false); // Display full URL in address bar
+user_pref('browser.urlbar.groupLabels.enabled', false);
 // URL bar mouse-clicks behavior
 user_pref('browser.urlbar.clickSelectsAll', true);
 user_pref('browser.urlbar.doubleClickSelectsAll', false);
