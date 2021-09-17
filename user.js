@@ -254,7 +254,6 @@ user_pref('browser.tabs.warnOnCloseOtherTabs', false);
 user_pref('browser.tabs.warnOnOpen', false);
 user_pref('full-screen-api.warning.delay', 0);
 user_pref('full-screen-api.warning.timeout', 0);
-user_pref('general.warnOnAboutConfig', false);
 user_pref('browser.aboutConfig.showWarning', false);
     /*      == Picture-in-Picture ==        */
 user_pref('media.videocontrols.picture-in-picture.enabled', true);
@@ -545,11 +544,7 @@ user_pref('dom.vr.enabled', false); // Disable WebVR API
 user_pref('dom.telephony.enabled', false); // Disable Telephony API
 user_pref('media.navigator.enabled', false);  // Disable media device enumeration
 user_pref('media.navigator.video.enabled', false); // Disable WebRTC video capture
-// Disable hardware acceleration to reduce graphics fingerprinting
-//user_pref('gfx.direct2d.disabled', true); // [WINDOWS]
-//user_pref('layers.acceleration.disabled', true);
 user_pref('dom.webaudio.enabled', false); // Disable WebAudio API
-//user_pref('media.media-capabilities.enabled', false); // Disable Media Capabilities API (may affect media performance if disabled)
     /*      == Mixed content ==     */
 user_pref('security.mixed_content.block_active_content', true); // Disable insecure active content on https pages
 user_pref('security.mixed_content.block_display_content', true); // Disable insecure passive content (such as images) on https pages
