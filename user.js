@@ -178,6 +178,8 @@ user_pref('browser.urlbar.openViewOnFocus', false);
 user_pref('browser.urlbar.suggest.topsites', false);
 // Disable live search suggestions
 //user_pref('browser.search.suggest.enabled', false);
+user_pref('browser.urlbar.suggest.quicksuggest', false);
+user_pref('browser.urlbar.suggest.quicksuggest.sponsored', false);
 user_pref('browser.urlbar.speculativeConnect.enabled', false); // Disable location bar making speculative connections
 // Disable location bar suggestion types
 //user_pref('browser.urlbar.suggest.history', false);
@@ -185,6 +187,8 @@ user_pref('browser.urlbar.speculativeConnect.enabled', false); // Disable locati
 //user_pref('browser.urlbar.suggest.openpage', false);
 //user_pref('browser.urlbar.suggest.searches', false);
 //user_pref('browser.urlbar.suggest.engines', false);
+user_pref('browser.urlbar.suggest.calculator', true); // Integrated calculator
+user_pref("browser.urlbar.unitConversion.enabled", true); // Integrated unit convertor
     /*      == Other ==     */
 // Misc
 user_pref('accessibility.force_disabled', 1); // Prevent accessibility services from accessing your browser
@@ -265,7 +269,10 @@ user_pref('media.videocontrols.picture-in-picture.video-toggle.enabled', true);
 // Disable icon fonts (glyphs) and local fallback rendering
 //user_pref('gfx.downloadable_fonts.enabled', false);
 //user_pref('gfx.downloadable_fonts.fallback_delay', -1);
-user_pref('layout.css.font-visibility.level', 1); // Limit font visibility level
+// Limit font visibility level
+//user_pref("layout.css.font-visibility.private", 1);
+//user_pref("layout.css.font-visibility.standard", 1);
+//user_pref("layout.css.font-visibility.trackingprotection", 1);
 user_pref('font.name-list.emoji', 'emoji'); // Change Firefox emoji set (default = 'Twemoji Mozilla', system set = 'emoji')
 user_pref('gfx.font_rendering.opentype_svg.enabled', false); // Disable rendering of SVG OpenType fonts
 user_pref('gfx.font_rendering.graphite.enabled', false); // Disable graphite
@@ -617,8 +624,6 @@ user_pref('network.auth.subresource-http-auth-allow', 1); // HTTP authentication
 //user_pref('security.ssl3.rsa_aes_256_gcm_sha384', false); // no PFS
 //user_pref('security.ssl3.rsa_aes_128_sha', false); // no PFS
 //user_pref('security.ssl3.rsa_aes_256_sha', false); // no PFS
-
-
 
 /**
  * [SET] the following preferences adjusts the smooth scrolling feature of
