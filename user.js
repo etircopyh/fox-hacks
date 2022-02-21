@@ -142,6 +142,7 @@ user_pref('media.rdd-vpx.enabled', false); // Work around sandboxing bug (https:
 //user_pref('browser.download.folderList', 2); // Downloads directory
 user_pref('browser.download.saveLinkAsFilenameTimeout', 1000); // 'Save Link as ...' option timeout
 user_pref('browser.download.useDownloadDir', false); // Enforce user interaction for security by always asking where to download
+user_pref('browser.download.alwaysOpenPanel', false); // Disable downloads panel opening on every download
 user_pref('browser.download.manager.addToRecentDocs', false); // Disable adding downloads to the system's 'recent documents' list
 //user_pref('browser.download.forbid_open_with', true); // Disable 'open with' in download dialog
     /*      == New Tab Page ==      */
@@ -188,7 +189,7 @@ user_pref('browser.urlbar.speculativeConnect.enabled', false); // Disable locati
 //user_pref('browser.urlbar.suggest.searches', false);
 //user_pref('browser.urlbar.suggest.engines', false);
 user_pref('browser.urlbar.suggest.calculator', true); // Integrated calculator
-user_pref("browser.urlbar.unitConversion.enabled", true); // Integrated unit convertor
+user_pref('browser.urlbar.unitConversion.enabled', true); // Integrated unit convertor
     /*      == Other ==     */
 // Misc
 user_pref('accessibility.force_disabled', 1); // Prevent accessibility services from accessing your browser
@@ -250,13 +251,14 @@ user_pref('security.ssl.treat_unsafe_negotiation_as_broken', true); // Display w
 user_pref('browser.ssl_override_behavior', 1); // Control 'Add Security Exception' dialog on SSL warnings: 0 = do neither 1 = pre-populate url 2 = pre-populate url + pre-fetch cert (default)
 user_pref('browser.xul.error_pages.expert_bad_cert', true); // Display advanced information on Insecure Connection warning pages
 // Display 'insecure' icon and 'Not Secure' text on HTTP sites
-user_pref('security.insecure_connection_icon.enabled', true);
-user_pref('security.insecure_connection_text.enabled', true);
+//user_pref('security.insecure_connection_icon.enabled', true);
+//user_pref('security.insecure_connection_text.enabled', true);
 //user_pref('security.insecure_connection_icon.pbmode.enabled', true);
 //user_pref('security.insecure_connection_text.pbmode.enabled', true);
     /*      == Warnings ==        */
 user_pref('browser.tabs.warnOnCloseOtherTabs', false);
 user_pref('browser.tabs.warnOnOpen', false);
+//user_pref('browser.tabs.warnOnQuitShortcut', false);
 user_pref('full-screen-api.warning.delay', 0);
 user_pref('full-screen-api.warning.timeout', 0);
 user_pref('browser.aboutConfig.showWarning', false);
@@ -270,9 +272,9 @@ user_pref('media.videocontrols.picture-in-picture.video-toggle.enabled', true);
 //user_pref('gfx.downloadable_fonts.enabled', false);
 //user_pref('gfx.downloadable_fonts.fallback_delay', -1);
 // Limit font visibility level
-//user_pref("layout.css.font-visibility.private", 1);
-//user_pref("layout.css.font-visibility.standard", 1);
-//user_pref("layout.css.font-visibility.trackingprotection", 1);
+//user_pref('layout.css.font-visibility.private', 1);
+//user_pref('layout.css.font-visibility.standard', 1);
+//user_pref('layout.css.font-visibility.trackingprotection', 1);
 user_pref('font.name-list.emoji', 'emoji'); // Change Firefox emoji set (default = 'Twemoji Mozilla', system set = 'emoji')
 user_pref('gfx.font_rendering.opentype_svg.enabled', false); // Disable rendering of SVG OpenType fonts
 user_pref('gfx.font_rendering.graphite.enabled', false); // Disable graphite
@@ -284,7 +286,7 @@ user_pref('gfx.font_rendering.graphite.enabled', false); // Disable graphite
 //user_pref('layout.frame_rate', 60); // Pages FPS
 user_pref('canvas.capturestream.enabled', false); // Disable Canvas
 user_pref('gfx.canvas.azure.accelerated', true);
-user_pref('layers.acceleration.force-enabled', true);
+//user_pref('layers.acceleration.force-enabled', true);
 // WebGL
 user_pref('webgl.disabled', true);
 user_pref('webgl.disable-extensions', true);
@@ -292,7 +294,10 @@ user_pref('webgl.msaa-samples', 0);
 user_pref('layers.geometry.d3d11.enabled', false); // Disable usage of D3D11
 user_pref('layers.enable-tiles', true); // Tiles
 user_pref('browser.preferences.defaultPerformanceSettings.enabled', false); // Disable Firefox 'recommended' performance settings
-//user_pref('dom.ipc.processCount', 1); // Adjust Web Content process limit
+// Limit process amount
+user_pref('dom.ipc.processCount', 1); // Adjust Web Content process limit
+user_pref('extensions.webextensions.remote', false);
+user_pref('dom.ipc.keepProcessesAlive.privilegedabout', 0);
 user_pref('browser.tabs.unloadOnLowMemory', true); // Tabs discarding
 user_pref('security.sandbox.content.level', 0); // Sandbox content level (Optimal = 2)
 user_pref('fission.autostart', false);
@@ -320,7 +325,7 @@ user_pref('network.proxy.socks_remote_dns', true); // Enforce the proxy server t
 //user_pref('network.trr.bootstrapAddress', '1.1.1.1');
 //user_pref('network.trr.uri', 'https://cloudflare-dns.com/dns-query'); // DoH Server | https://github.com/curl/curl/wiki/DNS-over-HTTPS
 user_pref('network.trr.resolvers', '[{ "name": "Cloudflare (non-Mozilla)", "url": "https://cloudflare-dns.com/dns-query" },{ "name": "Cloudflare", "url": "https://mozilla.cloudflare-dns.com/dns-query" },{ "name": "Google", "url": "https://dns.google/dns-query" },{ "name": "Cisco/OpenDNS", "url": "https://doh.opendns.com/dns-query" },{ "name": "Adguard", "url": "https://dns.adguard.com/dns-query" },{ "name": "Adguard Family Protection", "url": "https://dns-family.adguard.com/dns-query" },{ "name": "DNSWarden Adblock", "url": "https://doh.dnswarden.com/adblock" },{ "name": "DNSWarden Uncensored", "url": "https://doh.dnswarden.com/uncensored" },{ "name": "SecureDNS", "url": "https://doh.securedns.eu/dns-query" },{ "name": "AppliedPrivacy", "url": "https://doh.appliedprivacy.net/query" },{ "name": "Digitale Gesellschaft (CH)", "url": "https://dns.digitale-gesellschaft.ch/dns-query" }, { "name": "Quad9", "url": "https://dns.quad9.net/dns-query" }]'); // DoH Resolvers
-user_pref('network.security.esni.enabled', true); // Enable ESNI
+//user_pref('network.security.esni.enabled', true); // Enable ESNI
 //user_pref('network.file.disable_unc_paths', false); // Disable using UNC (Uniform Naming Convention) paths NOTE: Can cause extension storage to fail
 user_pref('network.gio.supported-protocols', ''); // Disable GIO as a potential proxy bypass vector
 // Disable resource preloading / prefetch
@@ -329,10 +334,9 @@ user_pref('network.dns.disablePrefetchFromHTTPS', true);
 user_pref('network.predictor.enabled', false);
 user_pref('network.predictor.enable-prefetch', false);
 user_pref('network.prefetch-next', false);
-user_pref('network.http.accept-encoding', 'gzip, deflate, br'); // Enable Brotli support
 user_pref('network.http.speculative-parallel-limit', 0); // Disable connection opening on link-mouseover
 // HTTPS (SSL/TLS / OCSP / CERTS / HPKP / CIPHERS)
-user_pref('security.ssl.require_safe_negotiation', true); // Disable old SSL/TLS 'insecure' renegotiation (vulnerable to a MiTM attack)
+//user_pref('security.ssl.require_safe_negotiation', true); // Disable old SSL/TLS 'insecure' renegotiation (vulnerable to a MiTM attack)
 // Control TLS versions (Firefox telemetry (April 2019) shows only 0.5% of TLS web traffic uses 1.0 or 1.1) 1=TLS 1.0, 2=TLS 1.1, 3=TLS 1.2, 4=TLS 1.3
 user_pref('security.tls.version.min', 3);
 user_pref('security.tls.version.max', 4);
@@ -342,7 +346,7 @@ user_pref('security.tls.version.enable-deprecated', false); // Enforce TLS 1.0 a
 //user_pref('security.ssl.disable_session_identifiers', true); // Disable SSL session tracking [FPI]
 user_pref('security.tls.enable_0rtt_data', false); // Disable TLS1.3 0-RTT
 user_pref('security.OCSP.enabled', 0);
-user_pref('security.OCSP.require', true); // OCSP fetch: false = soft-fail, true = hard-fail
+//user_pref('security.OCSP.require', true); // OCSP fetch: false = soft-fail, true = hard-fail
 // CERTS / HPKP (HTTP Public Key Pinning)
 // Enforce CRLite
 user_pref('security.remote_settings.crlite_filters.enabled', true);
@@ -356,19 +360,20 @@ user_pref('security.cert_pinning.enforcement_level', 2); // PKP (Public Key Pinn
 //user_pref('network.captive-portal-service.enabled', false);
 //user_pref('network.connectivity-service.enabled', false); // Disable Network Connectivity checks
     /*      == Privacy ==       */
-user_pref('dom.security.https_only_mode', true); // Enable HTTPS only mode
-//user_pref('dom.security.https_only_mode_pbm', true);
+//user_pref('dom.security.https_only_mode', true); // Enable HTTPS only mode
+user_pref('dom.security.https_only_mode_pbm', true);
 //user_pref('dom.security.https_only_mode.upgrade_local', true); // Enable HTTPS-Only mode for local resources
 user_pref('dom.security.https_only_mode_send_http_background_request', false); // Disable HTTP background requests
 user_pref('browser.send_pings', false); // Disable 'Hyperlink auditing'
 // DRM
 user_pref('media.eme.enabled', false); // DRM-controlled content playback
-// user_pref('media.gmp-widevinecdm.visible', false);
+//user_pref('browser.eme.ui.enabled', false);
+//user_pref('media.gmp-widevinecdm.visible', false);
 user_pref('media.gmp-widevinecdm.enabled', false);
 //user_pref('media.gmp-provider.enabled', false); // Disable GMP (Gecko Media Plugins)
 user_pref('media.gmp-manager.url', 'data:text/plain,');
 user_pref('media.gmp-gmpopenh264.enabled', false);
-user_pref('network.cookie.cookieBehavior', 1); // Cookie behavior: 0 = Accept all cookies 1 = Block third-party cookies 2 = Block all cookies
+//user_pref('network.cookie.cookieBehavior', 1); // Cookie behavior: 0 = Accept all cookies 1 = Block third-party cookies 2 = Block all cookies
 user_pref('network.cookie.thirdparty.sessionOnly', true); // Set third-party cookies to session-only
 user_pref('network.cookie.thirdparty.nonsecureSessionOnly', true);
 user_pref('urlclassifier.trackingTable', '');
@@ -393,16 +398,16 @@ user_pref('privacy.window.name.update.enabled', true); // Enable 'window.name' p
 user_pref('privacy.spoof_english', 2); // If Accept-Language should be spoofed by en-US: 0 - will prompt (default), 1 - don't spoof, 2 - spoof
 // Referer
 user_pref('network.http.sendRefererHeader', 2); // Control when images/links send a referer: 0 = never, 1 = send only when links are clicked, 2 = for links and images (default)
-user_pref('network.http.referer.spoofSource', true); // Enable spoofing a referer
-user_pref('network.http.referer.XOriginPolicy', 2); // Send Referer: 0 = in all cases 1 = to same eTLD sites 2 = only when the full hostnames match
-user_pref('network.http.referer.XOriginTrimmingPolicy', 2); // Info to be sent to header: 0 = full url 1 = URL without query string 2 = scheme, host, and port
+//user_pref('network.http.referer.spoofSource', true); // Enable spoofing a referer
+user_pref('network.http.referer.XOriginPolicy', 0); // Send Referer: 0 = in all cases 1 = to same eTLD sites 2 = only when the full hostnames match
+user_pref('network.http.referer.XOriginTrimmingPolicy', 0); // Info to be sent to header: 0 = full url 1 = URL without query string 2 = scheme, host, and port
 //user_pref('network.http.referer.defaultPolicy', 2);
 //user_pref('network.http.referer.defaultPolicy.pbmode', 2);
 // Security
 user_pref('security.csp.enable', true); // Enable CSP (Content Security Policy)
 user_pref('security.dialog_enable_delay', 1000); // Enforce a security delay on some confirmation dialogs such as install, open/save
 // First Party Isolation
-user_pref('privacy.firstparty.isolate', true); // Enable First Party Isolation
+//user_pref('privacy.firstparty.isolate', true); // Enable First Party Isolation
 user_pref('privacy.firstparty.isolate.restrict_opener_access', true); // Enforce FPI restriction for window.opener
 //user_pref('privacy.firstparty.isolate.block_post_message', true);
 //user_pref('privacy.firstparty.isolate.use_site', true); // Enable scheme with FPI
@@ -485,7 +490,6 @@ user_pref('browser.search.geoip.timeout', 1);
 user_pref('browser.search.geoip.url', '');
 // Disable using the OS's geolocation service
 user_pref('geo.provider.ms-windows-location', false); // [WINDOWS]
-user_pref('geo.provider.use_corelocation', false); // [MAC]
 user_pref('geo.provider.use_gpsd', false); // [LINUX]
 user_pref('geo.wifi.uri', 'https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%'); // Use Mozilla geolocation service instead of Google when geolocation is enabled
 user_pref('geo.provider.network.url', 'https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%');
